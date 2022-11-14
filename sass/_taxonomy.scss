@@ -1,0 +1,54 @@
+.taxonomy-post_tag.wp-block-post-terms {
+	margin-bottom: calc(var(--type__size) * 3);
+}
+a[href*="tag/"]::before {
+	border-radius: 2px;
+	color: #000;
+	content: 'Capacity';
+	display: inline-block;
+	padding: .125em .75em;
+	margin-right: .5em;
+	font-size: .7rem;
+	font-family: var(--font_sans);
+	transition: all .2s ease-in-out;
+	font-weight:bold;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+a[href*="tag/diversity-equity-inclusion/"]::before {
+	background-color: RGB(var(--color__2ndary_green));
+	color: RGB(var(--color__2ndary_green_contrast));
+	content: 'Inclusion';
+}
+a[href*="tag/institutional-capacity/"]::before {
+	background-color: RGB(var(--color__2ndary_gray));
+	color: RGB(var(--color__2ndary_gray_contrast));
+	content: 'Capacity';
+}
+a[href*="tag/campus-experience/"]::before {
+	background-color: RGB(var(--color__2ndary_blue));
+	color: RGB(var(--color__2ndary_blue_contrast));
+	content: 'Experience';
+}
+a[href*="tag/outward-engagement/"]::before {
+	background-color: RGB(var(--color__2ndary_orange));
+	color: RGB(var(--color__2ndary_orange_contrast));
+	content: 'Engagement';
+}
+a[href*="tag/academic-research-excellence/"]::before {
+	background-color: RGB(var(--color__2ndary_yellow));
+	color: RGB(var(--color__2ndary_yellow_contrast));
+	content: 'Academic';
+}
+
+a[href*="tag/"]:hover::before {
+	background-color: #000;
+	color: #fff;
+}
+a[rel=tag] {
+	display: inline-block;
+	font-size: 0;
+}
+.wp-block-post-terms__separator {
+	display: none;
+}
