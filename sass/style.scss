@@ -49,30 +49,48 @@ Text Domain: woosta
 }
 
 
-.parent-pageid-290 #precontent::before,
-.parent-pageid-292 #precontent::before {
-	background-color: #dfdbd7;
+.parent-pageid-290 main,
+.parent-pageid-292 main {
+	z-index: 1;
+}
+.parent-pageid-290 main::before,
+.parent-pageid-292 main::before {
+	background-image: var(--thumbnail);
+	background-position: 50% 50%;
+	background-size: 200%;
 	content: ' ';
 	display: block;
-	height: 800px;
-	width: 100%;
 	position: absolute;
-	top: 0;
-	left: 0;
+	z-index: -1;
+
+	width: 100vw;
+	left: 50%;
+	margin-left:-50vw;
+
+	height: 85vh;
+	top: -4rem;
+	
+	clip-path: polygon(0 0, 100% 0 , 100% 90%, 0 90%);
+
+	filter: blur(30px) saturate(120%);
+	
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: xdrift;	
 }
 
+@keyframes drift {
+  0 {
+		background-size: 150%;
+		background-position: 50% 50%;
+  }
 
-#breadcrumbs {
-	display: none;
-}
-.breadcrumbs {
-	margin-top: 7.5rem;
-}
-.breadcrumbs li:first-of-type {
-	padding-left: 0;
-}
-.breadcrumbs li {
-	font-size: calc(var(--type__size) * .75);
+  100% {
+		background-size: 250%;
+		background-position: 70% 70%;
+	filter: blur(20px) saturate(140%);
+	}
 }
 
 
