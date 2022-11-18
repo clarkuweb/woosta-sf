@@ -573,7 +573,8 @@ p.goal-number {
 }
 
 .home-intro-1 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/jefferson.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/jefferson.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/jonas-hall.jpg);
 	background-position: 50% 100%;
 }
 
@@ -583,10 +584,10 @@ p.goal-number {
 }
 
 .home-intro-3 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/classroom.jpg);
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/classroom.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
 	background-position: 50% 100%;
 }
 
