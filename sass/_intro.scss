@@ -31,12 +31,12 @@
 // 	z-index: 1;
 // }
 
-.home-intro .wp-block-group.tint {
-	width: 100%;
-	background: linear-gradient(180deg, RGBA(0,0,0,0) 0%, RGBA(0,0,0,.7) 40%, RGBA(0,0,0,.8) 100%) !important;
-	padding-top: calc(var(--type__size) * 4) !important;
-	z-index: 1;
-}
+// .home-intro .wp-block-group.tint {
+// 	width: 100%;
+// 	background: linear-gradient(180deg, RGBA(0,0,0,0) 0%, RGBA(0,0,0,.7) 40%, RGBA(0,0,0,.8) 100%) !important;
+// 	padding-top: calc(var(--type__size) * 4) !important;
+// 	z-index: 1;
+// }
 
 .home-intro.sticky {
 	align-items: flex-end;
@@ -103,10 +103,11 @@
 	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/classroom.jpg);
 	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
 	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
 	background-position: 50% 100%;
 }
 .home-intro-4 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/autumn.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
 	background-position: 50% 100%;
 }
 
@@ -131,6 +132,48 @@
 // 	margin-top: 2rem;
 // 	visibility: hidden;
 // }
+
+
+
+
+
+.home .home-intro h1,
+.home .home-intro p {
+	background-color: rgba(30,30,30,.5) !important;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	backdrop-filter: blur(4px) saturate(200%) brightness(90%);
+	display: inline;
+	padding: .5rem 1.25rem;
+}
+.home .home-intro.home-intro-1 h1 {
+	display: block !important;
+	margin: 0;
+	white-space: nowrap;
+	font-size: calc(var(--type__size) * 1.7);
+}
+.home .home-intro.home-intro-1 h1.lg {
+	font-size: calc(var(--type__size) * 6);
+}
+
+.home-intro p.has-large-font-size {
+	line-height: 1.7;
+}
+.home-intro.home-intro-2 p.has-large-font-size {
+	line-height: 1.55;
+}
+.home-intro.home-intro-4 p.no-bg {
+	background-color: transparent !important;
+	backdrop-filter: none;;
+	display: block;
+	padding: 0;
+	margin-top: 1.5rem;
+}
+.home-intro strong {
+	background-color: #cc0000;
+}
+
+
 
 
 @keyframes arrow-bounce {

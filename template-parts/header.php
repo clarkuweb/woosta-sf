@@ -27,6 +27,7 @@
 	<?php dynamic_sidebar( 'preheader' ); ?>
 			
 <section>
+	<div class="nav-bg"></div>
 	<div class="alignfull nav-trad">
 		<div class="wp-block-columns are-vertically-aligned-top column-width">
 		

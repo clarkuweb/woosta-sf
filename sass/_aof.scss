@@ -78,8 +78,57 @@
 				opacity: 1;
 			}
 		}
-
 	}
+	.aof-card {
+		width: calc(50% - .5rem);
+		a {
+			box-shadow: 1px 1px 3px #aaa;
+			color: #000;
+			display: flex;
+			margin-bottom: 0;
+			overflow: hidden;
+			text-decoration: none;
+			transition: .2s all ease;
+			img {
+				display: block;
+				width: 60%;
+				transition: .2s all ease;
+			}
+			span {
+				aspect-ratio: 1/1;
+				background-color: #fff;
+				border-top: 2px solid #cc0000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				font-size: 1rem;
+				margin: 0;
+				padding: .5rem;
+				position: relative;
+				width: calc(42% - .25rem);
+				z-index: 1;
+			}
+			
+			&:hover {
+				box-shadow: 1px 1px 5px #ddd;
+				color: #cc0000;
+				transform: translateY(-2px);
+				
+				img {
+					scale: 1.01;
+				}
+			}
+		}
+	}
+}
+
+.aof-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	
+	margin-bottom: 4rem;
 }
 
 

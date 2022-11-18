@@ -96,7 +96,7 @@ Text Domain: woosta
 
 
 #primary {
-	margin-top: 7.5rem;
+	margin-top: 2.25rem;
 	position: relative;
 }
 .home .entry-content {
@@ -340,9 +340,16 @@ body.admin-bar .nav-trad {
 	top: 1.5rem;
 }
 
+.nav-bg {
+	background-color: #cc0000;
+	height: 5.25rem;
+	position: relative;
+	z-index: 1;
+}
+
 .nav-trad {
-/* 	display: none; */
 	background-color: #333;
+	background-color: transparent;
 	padding: .5rem;
 	position: fixed;
 	top: 0;
@@ -366,9 +373,12 @@ body.admin-bar .nav-trad {
 }
 
 .main-nav ul {
+	-webkit-backdrop-filter: blur(5px) brightness(90%);
+	backdrop-filter: blur(5px) brightness(90%);
+	border-radius: 2px;
 	margin: 1rem 0 0;
-	padding: 0;
-	text-align: right;
+	padding: 0 0 .3rem;
+	text-align: center;
 }
 
 .main-nav ul li {
@@ -380,21 +390,15 @@ body.admin-bar .nav-trad {
 .main-nav li a {
 	color: #fff;
 	padding: .5rem;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
-.main-nav li {
-/* 	border-bottom: 2px solid transparent; */
-	display: inline-block;
-	padding: .25rem 0 .35rem !important;
-}
 .main-nav .current_page_item a,
 .main-nav .current-page-ancestor a {
-	text-decoration: none;
-}
-.main-nav .current_page_item,
-.main-nav .current-page-ancestor {
-	background-color: #000;
-	position: relative;
+	text-decoration: underline;
 }
 
 

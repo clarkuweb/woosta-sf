@@ -99,6 +99,59 @@ Text Domain: woosta
 	opacity: 1;
 }
 
+.aof .aof-card {
+	width: calc(50% - .5rem);
+}
+
+.aof .aof-card a {
+	box-shadow: 1px 1px 3px #aaa;
+	color: #000;
+	display: flex;
+	margin-bottom: 0;
+	overflow: hidden;
+	text-decoration: none;
+	transition: .2s all ease;
+}
+
+.aof .aof-card a img {
+	display: block;
+	width: 60%;
+	transition: .2s all ease;
+}
+
+.aof .aof-card a span {
+	aspect-ratio: 1/1;
+	background-color: #fff;
+	border-top: 2px solid #cc0000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 1rem;
+	margin: 0;
+	padding: .5rem;
+	position: relative;
+	width: calc(42% - .25rem);
+	z-index: 1;
+}
+
+.aof .aof-card a:hover {
+	box-shadow: 1px 1px 5px #ddd;
+	color: #cc0000;
+	transform: translateY(-2px);
+}
+
+.aof .aof-card a:hover img {
+	scale: 1.01;
+}
+
+.aof-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 4rem;
+}
+
 .aof.radial {
 	height: 35rem;
 	order: 1;
@@ -470,13 +523,6 @@ p.goal-number {
 	animation: 2s ease-in-out 0s 50 arrow-bounce;
 }
 
-.home-intro .wp-block-group.tint {
-	width: 100%;
-	background: linear-gradient(180deg, RGBA(0, 0, 0, 0) 0%, RGBA(0, 0, 0, 0.7) 40%, RGBA(0, 0, 0, 0.8) 100%) !important;
-	padding-top: calc(var(--type__size) * 4) !important;
-	z-index: 1;
-}
-
 .home-intro.sticky {
 	align-items: flex-end;
 	left: 0 !important;
@@ -540,12 +586,54 @@ p.goal-number {
 	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/classroom.jpg);
 	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
 	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
 	background-position: 50% 100%;
 }
 
 .home-intro-4 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/autumn.jpg);
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
 	background-position: 50% 100%;
+}
+
+.home .home-intro h1,
+.home .home-intro p {
+	background-color: rgba(30, 30, 30, 0.5) !important;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	backdrop-filter: blur(4px) saturate(200%) brightness(90%);
+	display: inline;
+	padding: .5rem 1.25rem;
+}
+
+.home .home-intro.home-intro-1 h1 {
+	display: block !important;
+	margin: 0;
+	white-space: nowrap;
+	font-size: calc(var(--type__size) * 1.7);
+}
+
+.home .home-intro.home-intro-1 h1.lg {
+	font-size: calc(var(--type__size) * 6);
+}
+
+.home-intro p.has-large-font-size {
+	line-height: 1.7;
+}
+
+.home-intro.home-intro-2 p.has-large-font-size {
+	line-height: 1.55;
+}
+
+.home-intro.home-intro-4 p.no-bg {
+	background-color: transparent !important;
+	backdrop-filter: none;
+	display: block;
+	padding: 0;
+	margin-top: 1.5rem;
+}
+
+.home-intro strong {
+	background-color: #cc0000;
 }
 
 @keyframes arrow-bounce {
@@ -626,7 +714,7 @@ p.goal-number {
 }
 
 #primary {
-	margin-top: 7.5rem;
+	margin-top: 2.25rem;
 	position: relative;
 }
 
@@ -858,9 +946,16 @@ body.admin-bar .nav-trad {
 	top: 1.5rem;
 }
 
+.nav-bg {
+	background-color: #cc0000;
+	height: 5.25rem;
+	position: relative;
+	z-index: 1;
+}
+
 .nav-trad {
-	/* 	display: none; */
 	background-color: #333;
+	background-color: transparent;
 	padding: .5rem;
 	position: fixed;
 	top: 0;
@@ -888,9 +983,12 @@ body.admin-bar .nav-trad {
 }
 
 .main-nav ul {
+	-webkit-backdrop-filter: blur(5px) brightness(90%);
+	backdrop-filter: blur(5px) brightness(90%);
+	border-radius: 2px;
 	margin: 1rem 0 0;
-	padding: 0;
-	text-align: right;
+	padding: 0 0 .3rem;
+	text-align: center;
 }
 
 .main-nav ul li {
@@ -903,23 +1001,16 @@ body.admin-bar .nav-trad {
 .main-nav li a {
 	color: #fff;
 	padding: .5rem;
+	text-decoration: none;
 }
 
-.main-nav li {
-	/* 	border-bottom: 2px solid transparent; */
-	display: inline-block;
-	padding: .25rem 0 .35rem !important;
+.main-nav li a:hover {
+	text-decoration: underline;
 }
 
 .main-nav .current_page_item a,
 .main-nav .current-page-ancestor a {
-	text-decoration: none;
-}
-
-.main-nav .current_page_item,
-.main-nav .current-page-ancestor {
-	background-color: #000;
-	position: relative;
+	text-decoration: underline;
 }
 
 /** FOOTER **/
