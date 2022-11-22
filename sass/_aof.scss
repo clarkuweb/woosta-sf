@@ -242,3 +242,90 @@ ul.aof-related .title {
 	font-size: 1rem;
 }
 
+
+
+
+
+
+.discs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	margin: 0 auto 2rem;
+	h2 {
+		font-family: var(--type_sans) !important;
+		font-size: 1.2rem;
+		margin: 0 auto;
+		max-width: 200px;
+		text-align: center;
+	}
+	& + .discs {
+		margin-top: -2rem;
+	}		
+	a {
+		display: block;
+		max-width: calc(100% / 3);
+	}
+}
+
+
+.disc {
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px #999;
+	margin: 1rem;
+	overflow: hidden;
+	position: relative;
+	transition: .3s all ease;
+	max-width: 200px;
+	.bg {
+		background-image: var(--thumbnail);
+		background-size: cover;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 0; right: 0;
+// 		filter: blur(2px);
+	}
+	.bg,
+	img {
+		border-radius: 50%;
+		height: 100%;
+		width: 100%;
+	}
+	img {
+		object-fit: cover;
+		transition: .3s all ease;
+	}
+}
+
+a:hover .disc {
+	box-shadow: 0 1px 4px #ccc;
+	transform: translateY(-2px);
+}
+
+// .disc img {
+// 	clip-path: ellipse(50% 50% at 80% 15%);
+// }
+// a:hover .disc img {
+// 	clip-path: ellipse(90% 65% at 10% 50%);
+// }
+// 
+// 
+// .disc.ne img {
+// 	clip-path: ellipse(50% 50% at 80% 15%);
+// }
+// .disc.se img {
+// 	clip-path: ellipse(50% 50% at 80% 80%);
+// }
+// .disc.sw img {
+// 	clip-path: ellipse(50% 50% at 30% 80%);
+// }
+// .disc.s img {
+// 	clip-path: ellipse(50% 50% at 50% 90%);
+// }
+// .disc.nw img {
+// 	clip-path: ellipse(50% 50% at 20% 25%);
+// }
+
+

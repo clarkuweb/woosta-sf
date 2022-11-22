@@ -269,6 +269,68 @@ ul.aof-related .title {
 	font-size: 1rem;
 }
 
+.discs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	margin: 0 auto 2rem;
+}
+
+.discs h2 {
+	font-family: var(--type_sans) !important;
+	font-size: 1.2rem;
+	margin: 0 auto;
+	max-width: 200px;
+	text-align: center;
+}
+
+.discs + .discs {
+	margin-top: -2rem;
+}
+
+.discs a {
+	display: block;
+	max-width: calc(100% / 3);
+}
+
+.disc {
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px #999;
+	margin: 1rem;
+	overflow: hidden;
+	position: relative;
+	transition: .3s all ease;
+	max-width: 200px;
+}
+
+.disc .bg {
+	background-image: var(--thumbnail);
+	background-size: cover;
+	background-position: 50% 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.disc .bg,
+.disc img {
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+
+.disc img {
+	object-fit: cover;
+	transition: .3s all ease;
+}
+
+a:hover .disc {
+	box-shadow: 0 1px 4px #ccc;
+	transform: translateY(-2px);
+}
+
 .goals-tiles {
 	gap: 1rem;
 	justify-content: center;
