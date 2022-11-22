@@ -16,14 +16,24 @@
 		<section class="footer-sf">
 			<div class="alignfull">
 				<div class="column-width">
-					<h2><span class="big">ClarkNext:</span><br>A Framework for Our Future</h2>
-					<figure class="aligncenter is-resized"><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri() . '/media/clark-logo-tagline-w.png'; ?>" alt="Clark University.  Challenge convention. Change our world." width="205" height="248"></figure>
+					<div class="wp-block-columns are-vertically-aligned-top">
+						<div class="wp-block-column is-vertically-aligned-top">
+							<figure class="aligncenter is-resized"><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri() . '/media/clark-logo-tagline-w.png'; ?>" alt="Clark University.  Challenge convention. Change our world." width="205" height="248"></figure></div>
+						<div class="wp-block-column is-vertically-aligned-top">
+							<h2>Office of the President</h2>
+							<p>950 Main Street<br>
+							Worcester, MA 01610<br>
+							Geography Building<br>
+							Room #202<br>
+							1-508-793-7320</p>
+						</div>
+					</div>					
 				</div>
 			</div>
 		</section>
 		
 		<section class="footer-some">
-			<h3>Follow Clark on social media</h3>
+			<h3>Follow Clark on Social Media</h3>
 
 			<div class="some">
 				<figure><a href="https://www.instagram.com/clarkuniversity/"><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/media/instagram.png" alt="instagram"></a></figure>

@@ -257,13 +257,6 @@ Text Domain: woosta
 	content: ':';
 }
 
-.aof-other h2,
-h2.related {
-	font-weight: 300;
-	text-transform: uppercase;
-	font-size: calc(var(--type__size) * .9);
-}
-
 ul.aof-related {
 	display: flex;
 	gap: 1rem;
@@ -276,80 +269,14 @@ ul.aof-related .title {
 	font-size: 1rem;
 }
 
-.section-goal {
-	padding-top: calc(var(--type__size) * 4);
-	padding-bottom: calc(var(--type__size) * 2);
-}
-
-.section-goal > .wp-block-group {
-	border: .5rem solid transparent;
-	border-width: .5rem 0;
-}
-
-.section-goal-1 {
-	background-color: RGBA(var(--color__2ndary_yellow), 1);
-	color: RGBA(var(--color__2ndary_yellow_contrast), 1);
-}
-
-.section-goal-2 {
-	background-color: RGBA(var(--color__2ndary_green), 1);
-	color: RGBA(var(--color__2ndary_green_contrast), 1);
-}
-
-.section-goal-3 {
-	background-color: RGBA(var(--color__2ndary_blue), 1);
-	color: RGBA(var(--color__2ndary_blue_contrast), 1);
-}
-
-.section-goal-4 {
-	background-color: RGBA(var(--color__2ndary_orange), 1);
-	color: RGBA(var(--color__2ndary_orange_contrast), 1);
-}
-
-.section-goal-5 {
-	background-color: RGBA(var(--color__2ndary_gray), 1);
-	color: RGBA(var(--color__2ndary_gray_contrast), 1);
-}
-
-.section-goal h2::before {
-	content: "";
-	display: block;
-	font-size: .75em;
-	font-weight: 400;
-	margin-bottom: .25em;
-	text-transform: uppercase;
-}
-
-.section-goal-1 h2::before {
-	content: "Goal 1";
-}
-
-.section-goal-2 h2::before {
-	content: "Goal 2";
-}
-
-.section-goal-3 h2::before {
-	content: "Goal 3";
-}
-
-.section-goal-4 h2::before {
-	content: "Goal 4";
-}
-
-.section-goal-5 h2::before {
-	content: "Goal 5";
-}
-
-.goals-tiles.numbered {
-	counter-reset: nums;
-}
-
-.goals-tiles.numbered li {
-	counter-increment: nums;
+.goals-tiles {
+	gap: 1rem;
+	justify-content: center;
 }
 
 .goals-tiles li {
 	font-size: calc(var(--type__size) * 1);
+	max-width: calc((100% / 3) - 1rem);
 }
 
 .goals-tiles li:hover {
@@ -358,53 +285,24 @@ ul.aof-related .title {
 }
 
 .goals-tiles li a {
-	background-color: RGBA(var(--color__2ndary_blue));
+	box-shadow: 1px 1px 3px #aaa;
 	color: #fff;
 	font-size: 1.5rem;
 	font-weight: 700 !important;
 	position: relative;
 	text-decoration: none;
-	text-transform: uppercase;
 	transition: all .2s ease-in-out;
 	z-index: 3;
 }
 
-.goals-tiles.numbered li a::before {
-	content: "Goal " counter(nums);
-	display: block;
-	font-size: .75em;
-	margin-bottom: .75em;
-}
-
-.goals-tiles.numbered li a::after {
-	content: counter(nums);
-	font-weight: 700;
-	font-size: 11em;
-	-webkit-text-stroke: 4px RGBA(var(--color__base_900), 0.2);
-	color: transparent;
-	position: absolute;
-	top: 0;
-	left: 0;
-	line-height: 1;
-	width: 100%;
-	text-align: center;
-	text-shadow: none;
-	transition: all .2s ease-in-out;
-	z-index: -1;
-}
-
 .goals-tiles li a:hover {
-	scale: 1.05;
-}
-
-.goals-tiles.numbered li a:hover::after {
-	color: RGBA(var(--color__base_900), 0.05);
-	-webkit-text-stroke: 4px RGBA(255, 255, 255, 0.5);
-	-webkit-text-stroke: 4px RGBA(var(--color__base_900), 0.15);
+	box-shadow: 1px 1px 5px #bbb;
+	scale: 1;
+	transform: translateY(-2px);
 }
 
 .goals-tiles li a[href*="goal1"] {
-	background-color: RGBA(var(--color__2ndary_yellow));
+	background-color: RGBA(var(--color__2ndary_aqua));
 }
 
 .goals-tiles li a[href*="goal2"] {
@@ -428,73 +326,43 @@ ul.aof-related .title {
 	max-width: 150px;
 }
 
-.header-goal.fixed .wp-block-cover__inner-container .wp-block-column:nth-child(even) {
+.section-goal {
+	margin-bottom: calc(var(--type__size) * 4);
+}
+
+.section-goal h2 {
+	aspect-ratio: 1/1;
+	background-color: RGBA(var(--color__2ndary_aqua));
+	color: #fff;
+	display: flex;
+	font-family: var(--type_sans);
+	align-items: center;
+	margin-top: calc(var(--type__size) * -12.5);
+	margin-left: calc(var(--type__size) * -1);
+	max-width: calc(var(--type__size) * 12.5);
+	padding: calc(var(--type__size) * 1);
 	position: relative;
-	top: calc(-7em*var(--spct));
+	z-index: 2;
 }
 
-.header-goal.fixed .wp-block-cover__inner-container .wp-block-column:nth-child(odd) {
-	position: relative;
-	top: calc(-17em*var(--spct));
+.section-goal-1 h2 {
+	background-color: rgba(var(--color__2ndary_aqua), 1);
 }
 
-/* .header-goal.fixed .goal-title-1 h1 {
-	line-height: calc(1.2 + (var(--spct)/5))	
-} */
-.header-goal h1 {
-	animation: .75s ease-in-out 0s 1 appear;
-	margin-bottom: 2rem;
-	text-transform: uppercase;
-	font-weight: 900;
-	font-size: 3.5rem;
-	font-size: 6.5vh;
-	color: #fff !important;
+.section-goal-2 h2 {
+	background-color: rgba(var(--color__2ndary_green), 1);
 }
 
-.header-goal h1::before {
-	display: block;
-	font-size: .5em;
-	font-weight: 500;
-	margin-bottom: .5em;
+.section-goal-3 h2 {
+	background-color: rgba(var(--color__2ndary_blue), 1);
 }
 
-.goal-1 h1::before {
-	content: "Goal 1";
+.section-goal-4 h2 {
+	background-color: rgba(var(--color__2ndary_orange), 1);
 }
 
-.goal-2 h1::before {
-	content: "Goal 2";
-}
-
-.goal-3 h1::before {
-	content: "Goal 3";
-}
-
-.goal-4 h1::before {
-	content: "Goal 4";
-}
-
-.goal-5 h1::before {
-	content: "Goal 5";
-}
-
-p.goal-number {
-	display: none;
-}
-
-@media (min-width: 782px) {
-	p.goal-number {
-		color: RGBA(var(--color__base_700), 0.1) !important;
-		display: block;
-		font-weight: 700 !important;
-		font-size: 21em;
-		font-size: 80vh !important;
-		-webkit-text-stroke: 3px RGBA(var(--color__base_900), 1);
-		line-height: 1;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-	}
+.section-goal-5 h2 {
+	background-color: rgba(var(--color__2ndary_gray), 1);
 }
 
 .home-intro-wrapper {
@@ -541,6 +409,7 @@ p.goal-number {
 
 .home-intro h1,
 .home-intro p {
+	font-family: "PT Serif", serif;
 	position: relative;
 	z-index: 10;
 }
@@ -618,11 +487,11 @@ p.goal-number {
 }
 
 .home-intro p.has-large-font-size {
-	line-height: 1.7;
+	line-height: 1.8;
 }
 
 .home-intro.home-intro-2 p.has-large-font-size {
-	line-height: 1.55;
+	line-height: 1.65;
 }
 
 .home-intro.home-intro-4 p.no-bg {
@@ -652,12 +521,13 @@ p.goal-number {
 :root {
 	--color__2ndary_orange: 234, 90, 53;
 	--color__2ndary_orange_contrast: 0, 0, 0;
-	--color__2ndary_green: 31, 79, 78;
+	--color__2ndary_green: 10, 77, 70;
 	--color__2ndary_green_contrast: 255, 255, 255;
-	--color__2ndary_yellow: 192, 130, 54;
+	--color__2ndary_aqua: 95, 167, 177;
+	--color__2ndary_yellow: 241, 211, 101;
 	--color__2ndary_yellow_contrast: 0, 0, 0;
 	--color__2ndary_blue: 67, 139, 219;
-	--color__2ndary_blue: 3, 104, 165;
+	--color__2ndary_blue: 20, 37, 67;
 	--color__2ndary_blue_contrast: 255, 255, 255;
 	--color__2ndary_gray: 88, 85, 90;
 	--color__2ndary_gray_contrast: 255, 255, 255;
@@ -673,6 +543,39 @@ p.goal-number {
 
 .entry-content::after {
 	margin-bottom: 0;
+}
+
+.entry-header {
+	margin: 0;
+	padding: 0;
+}
+
+.page-intro {
+	background-color: #EDEAE4;
+	padding: calc(var(--type__size) * 4) 0 calc(var(--type__size) * 7);
+	margin-bottom: calc(var(--type__size) * -3.25);
+}
+
+.page-intro-after {
+	position: relative;
+	z-index: 1;
+	padding: 2rem;
+	margin: -2rem -2rem 2rem -2rem;
+	background-color: rgba(var(--color__base_800), 1);
+}
+
+h1, h2, h3, h4, h5, h6, .page-intro p, h1.entry-title {
+	font-family: 'PT Serif', serif;
+	font-weight: 700;
+}
+
+.page-intro p {
+	font-family: 'PT Serif', serif;
+	font-weight: 300;
+}
+
+body h1 {
+	font-size: calc(var(--type__size) * 2.36);
 }
 
 .parent-pageid-290 main,
@@ -714,23 +617,16 @@ p.goal-number {
 	}
 }
 
-#primary {
-	margin-top: 2.25rem;
+header {
 	position: relative;
+}
+
+header .entry-title {
+	margin-top: 2.25rem;
 }
 
 .home .entry-content {
 	margin-top: -7.5rem !important;
-}
-
-h1.entry-title,
-.home .entry-content > .wp-block-group > h2 {
-	font-weight: 400;
-	text-transform: uppercase;
-}
-
-.home .entry-content > .wp-block-group > h2 {
-	font-size: 2.25rem;
 }
 
 #jacket {
@@ -763,6 +659,24 @@ h1.entry-title,
 
 .preheader > section {
 	margin: 0;
+}
+
+.wp-block-pullquote.big {
+	color: RGBA(var(--color__base800));
+	font-family: "PT Serif", serif;
+}
+
+.wp-block-pullquote.big p {
+	max-width: 100%;
+}
+
+.wp-block-pullquote.big blockquote {
+	margin: 0 calc(var(--type__size) * 3);
+}
+
+.wp-block-pullquote.big cite {
+	margin-left: 0;
+	text-align: left;
 }
 
 .home-detail,
@@ -928,9 +842,18 @@ article.singular {
 }
 
 .wp-block-group.cta {
-	background-color: RGBA(var(--color__2ndary_lgray), 1);
+	background-color: #cc0000;
+	color: #fff;
 	margin-bottom: 0;
 	padding: calc(var(--type__size) * 3);
+}
+
+.wp-block-group.cta .wp-block-columns, .wp-block-group.cta p {
+	margin-bottom: 0 !important;
+}
+
+.wp-block-group.cta p {
+	font-size: calc(var(--type__size) * .9);
 }
 
 .wp-block-group.cta .wp-block-buttons {
@@ -938,8 +861,14 @@ article.singular {
 	margin: 0 auto;
 }
 
-.wp-block-group.cta p {
-	font-size: calc(var(--type__size) * .9);
+.wp-block-group.cta .wp-block-button a,
+.wp-block-group.cta .wp-block-button a:hover {
+	background-color: transparent !important;
+	border-color: #fff;
+}
+
+.wp-block-group.cta .wp-block-button a:hover {
+	background-color: #aa0000 !important;
 }
 
 /** HEADER **/
@@ -984,8 +913,8 @@ body.admin-bar .nav-trad {
 }
 
 .main-nav ul {
-	-webkit-backdrop-filter: blur(5px) brightness(90%);
-	backdrop-filter: blur(5px) brightness(90%);
+	-webkit-backdrop-filter: blur(8px) brightness(90%);
+	backdrop-filter: blur(8px) brightness(90%);
 	border-radius: 2px;
 	margin: 1rem 0 0;
 	padding: 0 0 .3rem;
@@ -1023,24 +952,29 @@ footer.site-footer {
 	padding: 0;
 }
 
-.footer-sf {
+html body .footer-sf {
 	background-color: #333;
 	color: #fff;
-	padding: calc(var(--type__size) * 4) 0;
+	padding: calc(var(--type__size) * 2) 0;
 	text-align: center;
 }
 
-.footer-sf h2 {
+html body .footer-sf .wp-block-columns, html body .footer-sf p {
+	margin-bottom: 0 !important;
+}
+
+html body .footer-sf h2 {
 	margin: 0 auto 2rem;
 	text-align: center;
 }
 
-.footer-sf h2 .big {
-	font-size: calc(var(--type__size) * 3.5);
+html body .footer-sf p {
+	font-size: calc(var(--type__size) * .9);
 }
 
 .footer-some {
-	background-color: #000;
+	background-color: #58565b;
+	background-color: RGBA(var(--color__base_200));
 	color: #fff;
 	padding: 2rem 0;
 }
@@ -1049,7 +983,6 @@ footer.site-footer {
 	font-size: 1.25rem;
 	font-weight: 300;
 	margin: 0 auto .75rem;
-	text-transform: uppercase;
 	text-align: center;
 }
 

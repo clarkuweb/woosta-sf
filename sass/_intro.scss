@@ -62,6 +62,7 @@
 // 	color: RGBA(var(--color__base_100),1);
 // 	line-height: 2em;
 // 	padding: .25em .5em;
+	font-family: "PT Serif", serif;
 	position: relative;
 	z-index: 10;
 }
@@ -158,10 +159,10 @@
 }
 
 .home-intro p.has-large-font-size {
-	line-height: 1.7;
+	line-height: 1.8;
 }
 .home-intro.home-intro-2 p.has-large-font-size {
-	line-height: 1.55;
+	line-height: 1.65;
 }
 .home-intro.home-intro-4 p.no-bg {
 	background-color: transparent !important;
