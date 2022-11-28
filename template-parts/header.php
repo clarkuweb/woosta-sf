@@ -27,16 +27,15 @@
 	<?php dynamic_sidebar( 'preheader' ); ?>
 			
 <section>
-	<div class="nav-bg"></div>
 	<div class="alignfull nav-trad">
-		<div class="wp-block-columns are-vertically-aligned-top column-width">
+		<div class="wp-block-columns are-vertically-aligned-center column-width is-not-stacked-on-mobile">
 		
-			<div class="is-layout-flow wp-block-column is-vertically-aligned-top" style="flex-basis:220px">
+			<div class="is-layout-flow wp-block-column is-vertically-aligned-center" style="flex-basis:220px">
 				<figure><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/media/clark-horizontal.png" alt="Clark University"></figure>
 			</div>
 
-			<div class="wp-block-column is-vertically-aligned-top">				
-				<nav id="site-nav" class="main-nav">
+			<div class="wp-block-column is-vertically-aligned-center">				
+				<nav id="site-navigation" class="main-navigation">
 					<button class="menu-toggle" aria-controls="navigation-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'woosta' ); ?></button>
 					<?php
 					wp_nav_menu(
@@ -51,4 +50,5 @@
 
 		</div>
 	</div>
+
 </section>

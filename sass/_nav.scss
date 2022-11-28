@@ -1,0 +1,179 @@
+
+// .main-nav h2 {
+// 	display: none;
+// }
+// .main-nav button {
+// 	display: none;
+// }
+
+
+/** HEADER **/
+// body.admin-bar .nav-trad {
+// 	top: 1.5rem;
+// }
+
+
+.nav-trad {
+	background-color: #cc0000;
+	height: 5.25rem;
+	padding: .5rem;
+	position: relative;
+}
+
+.nav-trad figure {
+	margin-bottom: 0;
+}
+.nav-trad .column-width {
+	gap: .5rem;
+}
+.nav-trad img {
+	max-width: 200px;
+}
+
+
+
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	padding: 0 0 .3rem;
+	text-align: center;
+}
+
+.main-navigation ul li {
+	font-size: calc(var(--type__size) * .7);
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.main-navigation li a {
+	background-color: #cc0000;
+	color: #fff;
+	display: inline;
+	padding: .5rem;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.main-navigation .menu-toggle,
+.main-navigation .menu-toggle:hover {
+	background-color: transparent;
+}
+.main-navigation {
+	.menu-toggle {
+		cursor: pointer;
+		position: relative;
+		text-indent: 0;
+		&:hover {
+		}
+		&::before,
+		&::after {
+			border: 1px solid #fff;
+			content: '';
+			height: calc(var(--type__size) * 0);
+			position: absolute;
+			right: calc(var(--type__size) * -1);
+			transform: rotateZ(0);
+			transition: transform .4s ease-in-out;
+			width: calc(var(--type__size) * .75);
+		}
+		&::before {
+			top: 1.0em;
+		}
+		&::after {
+			top: 1.3em;
+		}
+	}
+}
+
+
+.main-navigation {
+	display: block;
+
+	ul {
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+.main-navigation li.current_page_item > a {
+	background-color: #cc0000;
+	color: #fff;
+	text-decoration: underline;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}

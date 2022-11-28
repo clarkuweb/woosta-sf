@@ -15,6 +15,7 @@ Text Domain: woosta
 @import 'aof';
 @import 'goals';
 @import 'intro';
+@import 'nav';
 
 :root {
 	--color__2ndary_plum: 39, 0, 29;
@@ -53,13 +54,22 @@ Text Domain: woosta
 body {
 	--wp--style--global--content-size: 53rem;
 }
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	font-weight: normal;
+}
+
+
 a:visited {
 	color: #cc0000;
 }
 .wp-block-button a:visited {
 	color: #fff;
 }
-
 
 .column-width {
 	padding: 0 var(--type__size) !important;
@@ -90,12 +100,25 @@ h1, h2, h3, h4, h5, h6, .page-intro p, h1.entry-title {
 }
 .page-intro p {
 	font-family: var(--type__serif);
-	font-weight: 300;
+	font-weight: 400;
+}
+.page-intro p.eyebrow {
+	font-family: var(--type__sans);
+	font-size: calc(var(--type__size) * .85);
+	font-weight: 600;
+	margin-bottom: calc(var(--type__size) * -.25);
+	text-transform: uppercase;
 }
 body h1 {
 	font-size: calc(var(--type__size) * 2.36);
 }
 
+
+/* implementation */
+.page-id-330 .wp-block-cover {
+	margin-top: calc(var(--type__size) * 3.5);
+	margin-bottom: calc(var(--type__size) * 3.5);	
+}
 
 
 
@@ -427,71 +450,6 @@ article.singular {
 
 
 
-/** HEADER **/
-body.admin-bar .nav-trad {
-	top: 1.5rem;
-}
-
-.nav-bg {
-	background-color: #cc0000;
-	height: 5.25rem;
-	position: relative;
-	z-index: 1;
-}
-
-.nav-trad {
-	background-color: #333;
-	background-color: transparent;
-	padding: .5rem;
-	position: fixed;
-	top: 0;
-	z-index: 99;
-}
-.nav-trad figure {
-	margin-bottom: 0;
-}
-.nav-trad .column-width {
-	gap: .5rem;
-}
-.nav-trad img {
-	max-width: 200px;
-}
-
-.main-nav h2 {
-	display: none;
-}
-.main-nav button {
-	display: none;
-}
-
-.main-nav ul {
-	-webkit-backdrop-filter: blur(8px) brightness(90%);
-	backdrop-filter: blur(8px) brightness(90%);
-	border-radius: 2px;
-	margin: 1rem 0 0;
-	padding: 0 0 .3rem;
-	text-align: center;
-}
-
-.main-nav ul li {
-	font-size: calc(var(--type__size) * .7);
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-.main-nav li a {
-	color: #fff;
-	padding: .5rem;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-.main-nav .current_page_item a,
-.main-nav .current-page-ancestor a {
-	text-decoration: underline;
-}
 
 
 /** FOOTER **/
