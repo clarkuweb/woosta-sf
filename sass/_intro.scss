@@ -83,7 +83,7 @@
 	font-size: calc(var(--type__size) * 1);
 }
 .home-intro h1.lg {
-	font-size: calc(var(--type__size) * 2.5);
+	font-size: calc(var(--type__size) * 2);
 	white-space: nowrap;
 }
 .home-intro p {
@@ -93,8 +93,11 @@
 }
 
 @media all and (min-width: 550px) {
+	.home-intro h1 {
+		font-size: calc(var(--type__size) * 1.2);
+	}
 	.home-intro h1.lg {
-		font-size: calc(var(--type__size) * 3.4);
+		font-size: calc(var(--type__size) * 3.25);
 		white-space: nowrap;
 	}
 	.home-intro p {
@@ -109,7 +112,7 @@
 		white-space: nowrap;
 	}
 	.home-intro h1.lg {
-  	font-size: calc(var(--type__size) * 5.2);
+  	font-size: calc(var(--type__size) * 4.25);
 	}
 	.home-intro p {
 	  font-size: calc(var(--type__size) * 2) !important;

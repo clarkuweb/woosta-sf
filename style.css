@@ -99,7 +99,7 @@ Text Domain: woosta
 	display: flex;
 	flex-wrap: wrap;
 	gap: .5rem;
-	margin-bottom: 4rem;
+	margin-bottom: calc(var(--type__size) * 2.5);
 }
 
 @media all and (min-width: 500px) {
@@ -150,6 +150,7 @@ ul.aof-related .title {
 .goals-tiles {
 	gap: .5rem;
 	justify-content: flex-start;
+	margin-bottom: calc(var(--type__size) * 2.5);
 }
 
 .goals-tiles li {
@@ -211,28 +212,8 @@ ul.aof-related .title {
 	transform: translateY(-2px);
 }
 
-.goals-tiles li a[href*="goal1"] {
-	background-color: RGBA(var(--color__2ndary_plum));
-}
-
-.goals-tiles li a[href*="goal2"] {
-	background-color: RGBA(var(--color__2ndary_green));
-}
-
-.goals-tiles li a[href*="goal3"] {
-	background-color: RGBA(var(--color__2ndary_blue));
-}
-
-.goals-tiles li a[href*="goal4"] {
-	background-color: RGBA(var(--color__2ndary_dark_red));
-}
-
-.goals-tiles li a[href*="goal5"] {
-	background-color: RGBA(var(--color__2ndary_gray));
-}
-
 .goals-tiles.thumbs a {
-	font-size: .95rem;
+	font-size: calc(var(--type__size) * .8);
 	max-width: 140px;
 }
 
@@ -242,37 +223,61 @@ ul.aof-related .title {
 
 .section-goal h2 {
 	aspect-ratio: 1/1;
-	background-color: RGBA(var(--color__2ndary_aqua));
+	background-color: rgba(var(--color__2ndary_plum), 1);
 	color: #fff;
 	display: flex;
-	font-family: var(--type_sans);
 	align-items: center;
-	margin-top: calc(var(--type__size) * -12.5);
+	font-family: var(--type_sans);
+	font-size: calc(var(--type__size) * .8) !important;
+	margin-top: calc(var(--type__size) * -5.5);
 	margin-left: calc(var(--type__size) * -1);
-	max-width: calc(var(--type__size) * 12.5);
-	padding: calc(var(--type__size) * 1);
+	margin-bottom: calc(var(--type__size) * 1);
+	max-width: calc(var(--type__size) * 7);
+	padding: calc(var(--type__size) * .5);
 	position: relative;
 	z-index: 2;
 }
 
+@media all and (min-width: 650px) {
+	.section-goal h2 {
+		aspect-ratio: 1/1;
+		display: flex;
+		align-items: center;
+		font-size: calc(var(--type__size) * 1.4) !important;
+		margin-top: calc(var(--type__size) * -12.5);
+		margin-left: calc(var(--type__size) * -1);
+		margin-bottom: calc(var(--type__size) * 2);
+		max-width: calc(var(--type__size) * 12.5);
+		padding: calc(var(--type__size) * 1);
+		padding: 1.75rem !important;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.goals-tiles li a[href*="goal1"],
 .section-goal-1 h2 {
-	background-color: rgba(var(--color__2ndary_plum), 1);
+	background-color: RGBA(var(--color__2ndary_plum));
 }
 
+.goals-tiles li a[href*="goal2"],
 .section-goal-2 h2 {
-	background-color: rgba(var(--color__2ndary_green), 1);
+	background-color: RGBA(var(--color__2ndary_green));
 }
 
+.goals-tiles li a[href*="goal3"],
 .section-goal-3 h2 {
-	background-color: rgba(var(--color__2ndary_blue), 1);
+	background-color: RGBA(var(--color__2ndary_blue));
 }
 
+.goals-tiles li a[href*="goal4"],
 .section-goal-4 h2 {
-	background-color: rgba(var(--color__2ndary_dark_red), 1);
+	background-color: RGBA(var(--color__2ndary_dark_red));
 }
 
+.goals-tiles li a[href*="goal5"],
 .section-goal-5 h2 {
-	background-color: rgba(var(--color__2ndary_gray), 1);
+	background-color: RGBA(var(--color__2ndary_gray));
 }
 
 @keyframes arrow-bounce {
@@ -360,7 +365,7 @@ ul.aof-related .title {
 }
 
 .home-intro h1.lg {
-	font-size: calc(var(--type__size) * 2.5);
+	font-size: calc(var(--type__size) * 2);
 	white-space: nowrap;
 }
 
@@ -371,8 +376,11 @@ ul.aof-related .title {
 }
 
 @media all and (min-width: 550px) {
+	.home-intro h1 {
+		font-size: calc(var(--type__size) * 1.2);
+	}
 	.home-intro h1.lg {
-		font-size: calc(var(--type__size) * 3.4);
+		font-size: calc(var(--type__size) * 3.25);
 		white-space: nowrap;
 	}
 	.home-intro p {
@@ -388,7 +396,7 @@ ul.aof-related .title {
 		white-space: nowrap;
 	}
 	.home-intro h1.lg {
-		font-size: calc(var(--type__size) * 5.2);
+		font-size: calc(var(--type__size) * 4.25);
 	}
 	.home-intro p {
 		font-size: calc(var(--type__size) * 2) !important;
