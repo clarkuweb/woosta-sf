@@ -212,7 +212,7 @@ ul.aof-related .title {
 }
 
 .goals-tiles li a[href*="goal1"] {
-	background-color: RGBA(var(--color__2ndary_aqua));
+	background-color: RGBA(var(--color__2ndary_plum));
 }
 
 .goals-tiles li a[href*="goal2"] {
@@ -224,7 +224,7 @@ ul.aof-related .title {
 }
 
 .goals-tiles li a[href*="goal4"] {
-	background-color: RGBA(var(--color__2ndary_orange));
+	background-color: RGBA(var(--color__2ndary_dark_red));
 }
 
 .goals-tiles li a[href*="goal5"] {
@@ -256,7 +256,7 @@ ul.aof-related .title {
 }
 
 .section-goal-1 h2 {
-	background-color: rgba(var(--color__2ndary_aqua), 1);
+	background-color: rgba(var(--color__2ndary_plum), 1);
 }
 
 .section-goal-2 h2 {
@@ -268,7 +268,7 @@ ul.aof-related .title {
 }
 
 .section-goal-4 h2 {
-	background-color: rgba(var(--color__2ndary_orange), 1);
+	background-color: rgba(var(--color__2ndary_dark_red), 1);
 }
 
 .section-goal-5 h2 {
@@ -436,6 +436,10 @@ ul.aof-related .title {
 }
 
 :root {
+	--color__2ndary_plum: 39, 0, 29;
+	--color__2ndary_plum_contrast: 0, 0, 0;
+	--color__2ndary_dark_red: 142, 4, 9;
+	--color__2ndary_dark_red_contrast: 0, 0, 0;
 	--color__2ndary_orange: 234, 90, 53;
 	--color__2ndary_orange_contrast: 0, 0, 0;
 	--color__2ndary_green: 10, 77, 70;
@@ -451,7 +455,7 @@ ul.aof-related .title {
 	--color__2ndary_lgray_contrast: 0, 0, 0;
 	--color__2ndary_lgray2: 215, 211, 203;
 	--color__2ndary_lgray2_contrast: 0, 0, 0;
-	--type__serif: 'PT Serif', serif;
+	--type__serif: 'Lora', serif;
 }
 
 body {

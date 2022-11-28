@@ -32,7 +32,7 @@ function woosta_sf_enqueue_styles() {
 		array( 'woosta-style' ),
 		woosta_sf_cache_buster()
 	);
-	wp_enqueue_style( 'woosta-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), NULL );
+	wp_enqueue_style( 'woosta-fonts', 'https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap', array(), NULL );
 
 }
 add_action( 'wp_enqueue_scripts', 'woosta_sf_enqueue_styles' );

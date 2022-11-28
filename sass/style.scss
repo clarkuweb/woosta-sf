@@ -17,6 +17,12 @@ Text Domain: woosta
 @import 'intro';
 
 :root {
+	--color__2ndary_plum: 39, 0, 29;
+	--color__2ndary_plum_contrast: 0, 0, 0;
+
+	--color__2ndary_dark_red: 142, 4, 9;
+	--color__2ndary_dark_red_contrast: 0, 0, 0;
+
 	--color__2ndary_orange: 234, 90, 53;
 	--color__2ndary_orange_contrast: 0, 0, 0;
 	
@@ -40,7 +46,7 @@ Text Domain: woosta
 	--color__2ndary_lgray2: 215, 211, 203;
 	--color__2ndary_lgray2_contrast: 0, 0, 0;
 	
-	--type__serif: 'PT Serif', serif;
+	--type__serif: 'Lora', serif;
 		
 }
 
@@ -212,6 +218,10 @@ header .entry-title {
 // 	text-indent: -2ch;
 }
 
+
+// .wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels::after {
+// 	display: none;
+// }
 
 
 
