@@ -45,62 +45,12 @@ Text Domain: woosta
 	transform: translateY(-5px);
 }
 
-.aof li.round {
-	display: block;
-	list-style: none;
-	width: 10rem;
-}
-
-.aof li.round a {
-	background-color: RGBA(70, 81, 109, 1);
-	border: 1px solid #000;
-	border-radius: 50%;
-	color: #fff;
-	display: grid;
-	font-size: 1rem;
-	padding: 0 .5em;
-	position: relative;
-	text-align: center;
+.aof-cards {
 	justify-content: center;
-	align-items: center;
-	width: 100%;
-	aspect-ratio: 1/1;
-	text-decoration: none;
-	transition: all .2s ease, background-size .5s ease;
-	z-index: 1;
-}
-
-.aof li.round a::before {
-	background-color: RGBA(70, 81, 109, 1);
-	background-image: var(--thumbnail);
-	background-size: cover;
-	border-radius: 50%;
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	transition: .2s all ease;
-	z-index: -1;
-	mix-blend-mode: screen;
-	filter: grayscale(100%) contrast(150%);
-	opacity: .2;
-}
-
-.aof li.round a:hover {
-	background: RGBA(0, 0, 0, 0.7);
-	text-shadow: 0 0 2px #000, -1px -1px 2px #000, 1px 1px 2px #000;
-	scale: 1.05;
-}
-
-.aof li.round a:hover::before {
-	filter: grayscale(0%) contrast(100%);
-	opacity: 1;
 }
 
 .aof .aof-card {
-	width: calc(50% - .5rem);
+	width: 100%;
 }
 
 .aof .aof-card a {
@@ -127,7 +77,7 @@ Text Domain: woosta
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	font-size: 1rem;
+	font-size: calc(var(--type__size) * .7);
 	margin: 0;
 	padding: .5rem;
 	position: relative;
@@ -148,118 +98,41 @@ Text Domain: woosta
 .aof-cards {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: .5rem;
 	margin-bottom: 4rem;
 }
 
-.aof.radial {
-	height: 35rem;
-	order: 1;
+@media all and (min-width: 500px) {
+	.aof .aof-card span {
+		font-size: calc(var(--type__size) * .85);
+	}
 }
 
-.aof.radial, .aof.radial li {
-	margin: 0;
-	padding: 0;
+@media all and (min-width: 600px) {
+	.aof-cards {
+		gap: 1rem;
+	}
+	.aof .aof-card {
+		width: calc(50% - .5rem);
+	}
+	.aof .aof-card span {
+		font-size: calc(var(--type__size) * 1);
+	}
 }
 
-.aof.radial li {
-	height: 16rem;
-	position: absolute;
-	top: 1.3rem;
-	left: calc(50% - 5rem);
-	transform-origin: 50% 100%;
+.aof.thumbs .aof-card {
+	width: calc((100%/3) - 1rem);
 }
 
-.aof.radial-4 li {
-	height: 15rem;
-}
-
-.aof.radial-4 li:nth-child(2) {
-	transform: rotateZ(270deg);
-}
-
-.aof.radial-4 li:nth-child(2) > div {
-	transform: rotateZ(-270deg);
-}
-
-.aof.radial-4 li:nth-child(3) {
-	transform: rotateZ(90deg);
-}
-
-.aof.radial-4 li:nth-child(3) > div {
-	transform: rotateZ(-90deg);
-}
-
-.aof.radial-4 li:nth-child(4) {
-	transform: rotateZ(180deg);
-}
-
-.aof.radial-4 li:nth-child(4) > div {
-	transform: rotateZ(-180deg);
-}
-
-.aof.radial-5 li:nth-child(2) {
-	transform: rotateZ(288deg);
-}
-
-.aof.radial-5 li:nth-child(2) > div {
-	transform: rotateZ(-288deg);
-}
-
-.aof.radial-5 li:nth-child(3) {
-	transform: rotateZ(72deg);
-}
-
-.aof.radial-5 li:nth-child(3) > div {
-	transform: rotateZ(-72deg);
-}
-
-.aof.radial-5 li:nth-child(4) {
-	transform: rotateZ(216deg);
-}
-
-.aof.radial-5 li:nth-child(4) > div {
-	transform: rotateZ(-216deg);
-}
-
-.aof.radial-5 li:nth-child(5) {
-	transform: rotateZ(144deg);
-}
-
-.aof.radial-5 li:nth-child(5) > div {
-	transform: rotateZ(-144deg);
-}
-
-.aof.ruled {
-	margin-left: 0;
-	padding-left: 0;
-}
-
-.aof.ruled li {
-	border: 2px solid #cc0000;
-	border-width: 2px 0 0;
-	font-size: var(--type__size);
-	list-style: none;
-	margin: 0;
-	padding: calc(var(--type__size)*2) 30% calc(var(--type__size)*2) calc(var(--type__size)*2);
-}
-
-.aof.ruled li:last-of-type {
-	border-width: 2px 0;
-}
-
-.aof.ruled .title {
-	font-size: inherit;
-	font-weight: 300;
-}
-
-.aof.ruled .title::after {
-	content: ':';
+.aof.thumbs .aof-card span {
+	font-size: calc(var(--type__size) * .6);
 }
 
 ul.aof-related {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1rem;
+	justify-content: center;
 	list-style: none;
 	margin-left: 0;
 	padding-left: 0;
@@ -269,76 +142,19 @@ ul.aof-related .title {
 	font-size: 1rem;
 }
 
-.discs {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	justify-content: center;
-	margin: 0 auto 2rem;
-}
-
-.discs h2 {
-	font-family: var(--type_sans) !important;
-	font-size: 1.2rem;
-	margin: 0 auto;
-	max-width: 200px;
-	text-align: center;
-}
-
-.discs + .discs {
-	margin-top: -2rem;
-}
-
-.discs a {
-	display: block;
-	max-width: calc(100% / 3);
-}
-
-.disc {
-	aspect-ratio: 1/1;
-	border-radius: 50%;
-	box-shadow: 0 1px 2px #999;
-	margin: 1rem;
-	overflow: hidden;
-	position: relative;
-	transition: .3s all ease;
-	max-width: 200px;
-}
-
-.disc .bg {
-	background-image: var(--thumbnail);
-	background-size: cover;
-	background-position: 50% 50%;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-.disc .bg,
-.disc img {
-	border-radius: 50%;
-	height: 100%;
-	width: 100%;
-}
-
-.disc img {
-	object-fit: cover;
-	transition: .3s all ease;
-}
-
-a:hover .disc {
-	box-shadow: 0 1px 4px #ccc;
-	transform: translateY(-2px);
+.aof-related,
+.aof-other {
+	margin-top: calc(var(--type__size) * 3);
 }
 
 .goals-tiles {
-	gap: 1rem;
-	justify-content: center;
+	gap: .5rem;
+	justify-content: flex-start;
 }
 
 .goals-tiles li {
 	font-size: calc(var(--type__size) * 1);
-	max-width: calc((100% / 3) - 1rem);
+	max-width: calc((100% / 2) - 1rem);
 }
 
 .goals-tiles li:hover {
@@ -347,14 +163,46 @@ a:hover .disc {
 }
 
 .goals-tiles li a {
+	aspect-ratio: 1/1;
 	box-shadow: 1px 1px 3px #aaa;
 	color: #fff;
-	font-size: 1.5rem;
+	display: block;
+	font-size: calc(var(--type__size) * .8);
 	font-weight: 700 !important;
+	padding: calc(var(--type__size) * .5);
 	position: relative;
 	text-decoration: none;
 	transition: all .2s ease-in-out;
 	z-index: 3;
+}
+
+@media all and (min-width: 400px) {
+	.goals-tiles li a {
+		font-size: calc(var(--type__size) * 1);
+	}
+}
+
+@media all and (min-width: 500px) {
+	.goals-tiles li a {
+		font-size: calc(var(--type__size) * 1);
+		padding: calc(var(--type__size) * 1);
+	}
+}
+
+@media all and (min-width: 600px) {
+	.goals-tiles {
+		gap: 1rem;
+		justify-content: center;
+	}
+	.goals-tiles li {
+		max-width: calc((100% / 3) - 1rem);
+	}
+}
+
+@media all and (min-width: 720px) {
+	.goals-tiles li a {
+		font-size: calc(var(--type__size) * 1.25);
+	}
 }
 
 .goals-tiles li a:hover {
@@ -385,7 +233,7 @@ a:hover .disc {
 
 .goals-tiles.thumbs a {
 	font-size: .95rem;
-	max-width: 150px;
+	max-width: 140px;
 }
 
 .section-goal {
@@ -427,146 +275,6 @@ a:hover .disc {
 	background-color: rgba(var(--color__2ndary_gray), 1);
 }
 
-.home-intro-wrapper {
-	scroll-snap-type: y proximity;
-}
-
-.home-intro {
-	background-size: cover;
-	color: #fff;
-	font-weight: 600;
-	/* 	margin-top: -7.5rem; */
-	/* 	margin-bottom: 4rem; */
-}
-
-.home-intro::after {
-	content: "";
-	height: 2rem;
-	width: 2rem;
-	border: 2px solid #fff;
-	border-width: 0 2px 2px 0;
-	transform: rotate(45deg);
-	position: absolute;
-	bottom: 5rem;
-	z-index: 9;
-	animation: 2s ease-in-out 0s 50 arrow-bounce;
-}
-
-.home-intro.sticky {
-	align-items: flex-end;
-	left: 0 !important;
-	margin-left: calc(-50vw + 403px);
-	width: 100vw;
-}
-
-.home-body {
-	background-color: RGB(var(--color__base_800));
-}
-
-.home-intro.sticky div.column-width {
-	margin-bottom: 15vh;
-	max-width: 45rem;
-}
-
-.home-intro h1,
-.home-intro p {
-	font-family: "PT Serif", serif;
-	position: relative;
-	z-index: 10;
-}
-
-.home-intro-1 h1 {
-	font-size: calc(var(--type__size) * 1.75);
-}
-
-.home-intro-1 h1 .lg {
-	display: block;
-	font-size: calc(var(--type__size) * 6) !important;
-}
-
-.home-intro-2 p {
-	font-size: calc(var(--type__size) * 3) !important;
-}
-
-.home-intro-3 p,
-.home-intro-4 p {
-	font-size: calc(var(--type__size) * 2) !important;
-}
-
-.home-intro strong {
-	background-color: RGBA(200, 0, 0, 0.8);
-	box-decoration-break: clone;
-	-webkit-box-decoration-break: clone;
-	display: inline;
-	line-height: 2em;
-	padding: .25em .5em;
-}
-
-.home-intro-1 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/jefferson.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/jonas-hall.jpg);
-	background-position: 50% 100%;
-}
-
-.home-intro-2 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/good-human.jpg);
-	background-position: 0 100%;
-}
-
-.home-intro-3 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/classroom.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-position: 50% 100%;
-}
-
-.home-intro-4 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
-	background-position: 50% 100%;
-}
-
-.home .home-intro h1,
-.home .home-intro p {
-	background-color: rgba(30, 30, 30, 0.5) !important;
-	box-decoration-break: clone;
-	-webkit-box-decoration-break: clone;
-	backdrop-filter: blur(4px) saturate(200%) brightness(90%);
-	display: inline;
-	padding: .5rem 1.25rem;
-}
-
-.home .home-intro.home-intro-1 h1 {
-	display: block !important;
-	margin: 0;
-	white-space: nowrap;
-	font-size: calc(var(--type__size) * 1.7);
-}
-
-.home .home-intro.home-intro-1 h1.lg {
-	font-size: calc(var(--type__size) * 6);
-}
-
-.home-intro p.has-large-font-size {
-	line-height: 1.8;
-}
-
-.home-intro.home-intro-2 p.has-large-font-size {
-	line-height: 1.65;
-}
-
-.home-intro.home-intro-4 p.no-bg {
-	background-color: transparent !important;
-	backdrop-filter: none;
-	display: block;
-	padding: 0;
-	margin-top: 1.5rem;
-}
-
-.home-intro strong {
-	background-color: #cc0000;
-}
-
 @keyframes arrow-bounce {
 	0% {
 		transform: translateY(-2rem) rotate(45deg);
@@ -579,6 +287,154 @@ a:hover .disc {
 	}
 }
 
+.home-intro-wrapper {
+	scroll-snap-type: y proximity;
+}
+
+.home-intro {
+	background-size: cover;
+	color: #fff;
+	font-weight: 600;
+}
+
+.home-intro::after {
+	content: "";
+	height: 2rem;
+	width: 2rem;
+	border: 2px solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: 1rem;
+	z-index: 9;
+	animation: 2s ease-in-out 0s 50 arrow-bounce;
+}
+
+.home-intro.sticky {
+	align-items: flex-end;
+	left: 0 !important;
+	margin-left: calc(var(--type__size) * -1);
+	margin-right: calc(var(--type__size) * -1);
+	width: 100vw;
+}
+
+@media all and (min-width: 850px) {
+	.home-intro.sticky {
+		margin-left: calc(-50vw + 403px);
+	}
+}
+
+.home-body {
+	background-color: RGB(var(--color__base_800));
+}
+
+.home-intro.sticky div.column-width {
+	margin-bottom: 15vh;
+	max-width: 45rem;
+	padding: 0;
+}
+
+.home-intro h1,
+.home-intro p {
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	display: inline;
+	font-family: var(--type__serif);
+	position: relative;
+	z-index: 10;
+}
+
+.home-intro h1 {
+	display: block;
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.home-intro-1 .wp-block-group.column-width {
+	padding: 2rem 2.5rem 2.5rem !important;
+}
+
+.home-intro h1 {
+	font-size: calc(var(--type__size) * 1);
+}
+
+.home-intro h1.lg {
+	font-size: calc(var(--type__size) * 2.5);
+	white-space: nowrap;
+}
+
+.home-intro p {
+	font-size: calc(var(--type__size) * 1.2) !important;
+	line-height: 1.55;
+	padding: .125rem .75rem;
+}
+
+@media all and (min-width: 550px) {
+	.home-intro h1.lg {
+		font-size: calc(var(--type__size) * 3.4);
+		white-space: nowrap;
+	}
+	.home-intro p {
+		font-size: calc(var(--type__size) * 1.5) !important;
+		line-height: 1.75;
+		padding: .375rem 1rem;
+	}
+}
+
+@media all and (min-width: 720px) {
+	.home-intro h1 {
+		font-size: calc(var(--type__size) * 1.5);
+		white-space: nowrap;
+	}
+	.home-intro h1.lg {
+		font-size: calc(var(--type__size) * 5.2);
+	}
+	.home-intro p {
+		font-size: calc(var(--type__size) * 2) !important;
+		padding: .5rem 1.25rem;
+	}
+}
+
+.home-intro strong {
+	background-color: RGBA(200, 0, 0, 0.8);
+	background-color: #cc0000;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	color: #fff;
+	display: inline;
+	line-height: 2em;
+	margin: 0 -.5em !important;
+	padding: .25em .5em;
+}
+
+.home-intro-1 .wp-block-group.column-width,
+.home-intro p {
+	background-color: rgba(0, 0, 0, 0.3);
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+}
+
+.home-intro-1 {
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/view-from-tilton.jpg);
+	background-position: 50% 100%;
+}
+
+.home-intro-2 {
+	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/good-human.jpg);
+	background-position: 0 100%;
+}
+
+.home-intro-3 {
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-position: 50% 100%;
+}
+
+.home-intro-4 {
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
+	background-position: 50% 100%;
+}
+
 :root {
 	--color__2ndary_orange: 234, 90, 53;
 	--color__2ndary_orange_contrast: 0, 0, 0;
@@ -587,7 +443,6 @@ a:hover .disc {
 	--color__2ndary_aqua: 95, 167, 177;
 	--color__2ndary_yellow: 241, 211, 101;
 	--color__2ndary_yellow_contrast: 0, 0, 0;
-	--color__2ndary_blue: 67, 139, 219;
 	--color__2ndary_blue: 20, 37, 67;
 	--color__2ndary_blue_contrast: 255, 255, 255;
 	--color__2ndary_gray: 88, 85, 90;
@@ -596,6 +451,19 @@ a:hover .disc {
 	--color__2ndary_lgray_contrast: 0, 0, 0;
 	--color__2ndary_lgray2: 215, 211, 203;
 	--color__2ndary_lgray2_contrast: 0, 0, 0;
+	--type__serif: 'PT Serif', serif;
+}
+
+body {
+	--wp--style--global--content-size: 53rem;
+}
+
+a:visited {
+	color: #cc0000;
+}
+
+.wp-block-button a:visited {
+	color: #fff;
 }
 
 .column-width {
@@ -626,12 +494,12 @@ a:hover .disc {
 }
 
 h1, h2, h3, h4, h5, h6, .page-intro p, h1.entry-title {
-	font-family: 'PT Serif', serif;
+	font-family: var(--type__serif);
 	font-weight: 700;
 }
 
 .page-intro p {
-	font-family: 'PT Serif', serif;
+	font-family: var(--type__serif);
 	font-weight: 300;
 }
 
@@ -724,7 +592,7 @@ header .entry-title {
 
 .wp-block-pullquote.big {
 	color: RGBA(var(--color__base800));
-	font-family: "PT Serif", serif;
+	font-family: var(--type__serif);
 }
 
 .wp-block-pullquote.big p {
@@ -758,7 +626,7 @@ header .entry-title {
 }
 
 .home-body .home-detail.wp-block-group {
-	background-color: RGBA(var(--color__2ndary_lgray), 1);
+	background-color: #EDEAE4;
 	color: RGBA(var(--color__2ndary_lgray_contrast), 1);
 	min-height: auto;
 }
@@ -775,14 +643,9 @@ header .entry-title {
 	margin: 0 -.25rem;
 }
 
-.home-goals {
-	/* 	background-color: RGBA(var(--color__2ndary_blue),1);
-	color: #fff; */
-}
-
 .home-focus,
 .focus-foci {
-	background-color: RGBA(var(--color__2ndary_lgray2), 1);
+	background-color: #EDEAE4;
 	color: RGBA(var(--color__2ndary_lgray2_contrast), 1);
 }
 
@@ -902,14 +765,11 @@ article.singular {
 	}
 }
 
-.wp-block-group .wp-block-group {
-	padding: 0 var(--type__size) !important;
-}
-
 .wp-block-group.cta {
 	background-color: #cc0000;
 	color: #fff;
 	margin-bottom: 0;
+	margin-top: calc(var(--type__size) * 4);
 	padding: calc(var(--type__size) * 3);
 }
 
@@ -929,7 +789,7 @@ article.singular {
 .wp-block-group.cta .wp-block-button a,
 .wp-block-group.cta .wp-block-button a:hover {
 	background-color: transparent !important;
-	border-color: #fff;
+	border: 2px solid #fff;
 }
 
 .wp-block-group.cta .wp-block-button a:hover {

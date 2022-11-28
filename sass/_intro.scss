@@ -1,182 +1,3 @@
-.home-intro-wrapper {
-	scroll-snap-type: y proximity;
-}
-.home-intro {
-	background-size: cover;
-	color: #fff;
-	font-weight: 600;
-/* 	margin-top: -7.5rem; */
-/* 	margin-bottom: 4rem; */
-}
-.home-intro::after {
-	content: "";
-	height: 2rem;
-	width: 2rem;
-	border: 2px solid #fff;
-	border-width: 0 2px 2px 0;
-	transform: rotate(45deg);
-	position: absolute;
-	bottom: 5rem;
-	z-index: 9;
-	animation: 2s ease-in-out 0s 50 arrow-bounce;
-}
-// .home-intro::before {
-// 	content: "";
-// 	height: 40%;
-// 	width: 100%;
-// 	position: absolute;
-// 	bottom: 0;
-// 	background: linear-gradient(180deg, RGBA(0,0,0,0) 0%, RGBA(0,0,0,.7) 60%, RGBA(0,0,0,.7) 80%) !important;
-// 	z-index: 1;
-// }
-
-// .home-intro .wp-block-group.tint {
-// 	width: 100%;
-// 	background: linear-gradient(180deg, RGBA(0,0,0,0) 0%, RGBA(0,0,0,.7) 40%, RGBA(0,0,0,.8) 100%) !important;
-// 	padding-top: calc(var(--type__size) * 4) !important;
-// 	z-index: 1;
-// }
-
-.home-intro.sticky {
-	align-items: flex-end;
-	left: 0 !important;
-	margin-left: calc(-50vw + 403px);
-	width: 100vw;
-}
-
-.home-body {
-	background-color: RGB( var(--color__base_800) );
-}
-
-.home-intro.sticky div.column-width {
-	margin-bottom: 15vh;
-	max-width: 45rem;
-}
-.home-intro h1,
-.home-intro p {
-// 	display: inline;
-// 	background: RGBA(var(--color__base_900),.9);
-// 	box-decoration-break: clone;
-// 	-webkit-box-decoration-break: clone;
-// 	color: RGBA(var(--color__base_100),1);
-// 	line-height: 2em;
-// 	padding: .25em .5em;
-	font-family: "PT Serif", serif;
-	position: relative;
-	z-index: 10;
-}
-
-.home-intro-1 h1 {
-	font-size: calc(var(--type__size) * 1.75);
-	.lg {
-		display: block;
-		font-size: calc(var(--type__size) * 6) !important;
-	}
-}
-
-.home-intro-2 p {
-	font-size: calc(var(--type__size) * 3) !important;
-}
-
-.home-intro-3 p,
-.home-intro-4 p {
-	font-size: calc(var(--type__size) * 2) !important;
-}
-
-.home-intro strong {
-	background-color: RGBA(200,0,0,.8);
-	box-decoration-break: clone;
-	-webkit-box-decoration-break: clone;
-	display: inline;
-	line-height: 2em;
-	padding: .25em .5em;
-}
-.home-intro-1 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/jefferson.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/jonas-hall.jpg);
-	background-position: 50% 100%;
-}
-.home-intro-2 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/good-human.jpg);
-	background-position: 0 100%;
-}
-.home-intro-3 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/classroom.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
-	background-position: 50% 100%;
-}
-.home-intro-4 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
-	background-position: 50% 100%;
-}
-
-// .home-intro-3.sticky > div {
-// 	margin-bottom: 15vh;
-// }
-// .home-intro-3 p:last-of-type {
-// 	white-space: nowrap;
-// }
-// .home-intro-4 h1 {
-// 	transform: translateX(-20rem) !important;
-// }
-// .home-intro-1 p.has-large-font-size {
-// 	font-size: calc(var(--type__size) * 2) !important;
-// }
-
-
-
-// .home-intro p + p::before {
-// 	content: '';
-// 	display: block;
-// 	margin-top: 2rem;
-// 	visibility: hidden;
-// }
-
-
-
-
-
-.home .home-intro h1,
-.home .home-intro p {
-	background-color: rgba(30,30,30,.5) !important;
-	box-decoration-break: clone;
-	-webkit-box-decoration-break: clone;
-	backdrop-filter: blur(4px) saturate(200%) brightness(90%);
-	display: inline;
-	padding: .5rem 1.25rem;
-}
-.home .home-intro.home-intro-1 h1 {
-	display: block !important;
-	margin: 0;
-	white-space: nowrap;
-	font-size: calc(var(--type__size) * 1.7);
-}
-.home .home-intro.home-intro-1 h1.lg {
-	font-size: calc(var(--type__size) * 6);
-}
-
-.home-intro p.has-large-font-size {
-	line-height: 1.8;
-}
-.home-intro.home-intro-2 p.has-large-font-size {
-	line-height: 1.65;
-}
-.home-intro.home-intro-4 p.no-bg {
-	background-color: transparent !important;
-	backdrop-filter: none;;
-	display: block;
-	padding: 0;
-	margin-top: 1.5rem;
-}
-.home-intro strong {
-	background-color: #cc0000;
-}
-
-
-
-
 @keyframes arrow-bounce {
   0% {
 		transform: translateY(-2rem) rotate(45deg);
@@ -187,4 +8,151 @@
   100% {
 		transform: translateY(-2rem) rotate(45deg);
   }
+}
+
+
+.home-intro-wrapper {
+	scroll-snap-type: y proximity;
+}
+.home-intro {
+	background-size: cover;
+	color: #fff;
+	font-weight: 600;
+	&::after {
+		content: "";
+		height: 2rem;
+		width: 2rem;
+		border: 2px solid #fff;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+		position: absolute;
+		bottom: 1rem;
+		z-index: 9;
+		animation: 2s ease-in-out 0s 50 arrow-bounce;
+	}
+}
+
+.home-intro.sticky {
+	align-items: flex-end;
+	left: 0 !important;
+	margin-left: calc(var(--type__size) * -1);
+	margin-right: calc(var(--type__size) * -1);
+	width: 100vw;
+}
+@media all and (min-width: 850px) {
+	.home-intro.sticky {
+		margin-left: calc(-50vw + 403px);
+	}
+}
+
+
+.home-body {
+	background-color: RGB( var(--color__base_800) );
+}
+
+.home-intro.sticky div.column-width {
+	margin-bottom: 15vh;
+	max-width: 45rem;
+	padding: 0;
+}
+
+
+.home-intro h1,
+.home-intro p {
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	display: inline;
+	font-family: var(--type__serif);
+	position: relative;
+	z-index: 10;
+}
+
+
+.home-intro h1 {
+	display: block;
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.home-intro-1 .wp-block-group.column-width {
+	padding: 2rem 2.5rem 2.5rem !important;
+}
+
+
+.home-intro h1 {
+	font-size: calc(var(--type__size) * 1);
+}
+.home-intro h1.lg {
+	font-size: calc(var(--type__size) * 2.5);
+	white-space: nowrap;
+}
+.home-intro p {
+	font-size: calc(var(--type__size) * 1.2) !important;
+	line-height: 1.55;
+	padding: .125rem .75rem;
+}
+
+@media all and (min-width: 550px) {
+	.home-intro h1.lg {
+		font-size: calc(var(--type__size) * 3.4);
+		white-space: nowrap;
+	}
+	.home-intro p {
+	  font-size: calc(var(--type__size) * 1.5) !important;
+		line-height: 1.75;
+		padding: .375rem 1rem;
+	}
+}
+@media all and (min-width: 720px) {
+	.home-intro h1 {
+		font-size: calc(var(--type__size) * 1.5);
+		white-space: nowrap;
+	}
+	.home-intro h1.lg {
+  	font-size: calc(var(--type__size) * 5.2);
+	}
+	.home-intro p {
+	  font-size: calc(var(--type__size) * 2) !important;
+		padding: .5rem 1.25rem;
+	}
+}
+
+.home-intro strong {
+	background-color: RGBA(200,0,0,.8);
+	background-color: #cc0000;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	color: #fff;
+	display: inline;
+	line-height: 2em;
+	margin: 0 -.5em !important;
+	padding: .25em .5em;
+}
+
+.home-intro-1 .wp-block-group.column-width,
+.home-intro p {
+	background-color: rgba(0,0,0,.3);
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+}
+
+
+
+
+
+.home-intro-1 {
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/view-from-tilton.jpg);
+	background-position: 50% 100%;
+}
+.home-intro-2 {
+	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/good-human.jpg);
+	background-position: 0 100%;
+}
+.home-intro-3 {
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-position: 50% 100%;
+}
+.home-intro-4 {
+	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
+	background-position: 50% 100%;
 }

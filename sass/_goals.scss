@@ -1,26 +1,58 @@
 .goals-tiles {
-	gap: 1rem;
-	justify-content: center;
+	gap: .5rem;
+	justify-content: flex-start;
 }
-
 .goals-tiles li {
 	font-size: calc(var(--type__size) * 1);
-	max-width: calc((100% / 3) - 1rem);
+	max-width: calc((100% / 2) - 1rem);
 }
+
 .goals-tiles li:hover {
 	position: relative;
 	z-index: 10;
 }
 .goals-tiles li a {
+	aspect-ratio: 1/1;
 	box-shadow: 1px 1px 3px #aaa;
 	color: #fff;
-	font-size: 1.5rem;
+	display: block;
+	font-size: calc(var(--type__size) * .8);
 	font-weight: 700 !important;
+	padding: calc(var(--type__size) * .5);
 	position: relative;
 	text-decoration: none;
 	transition: all .2s ease-in-out;
 	z-index: 3;
 }
+
+@media all and (min-width: 400px) {
+	.goals-tiles li a {
+		font-size: calc(var(--type__size) * 1);
+	}
+}
+@media all and (min-width: 500px) {
+	.goals-tiles li a {
+		font-size: calc(var(--type__size) * 1);
+		padding: calc(var(--type__size) * 1);
+	}
+}
+@media all and (min-width: 600px) {
+	.goals-tiles {
+		gap: 1rem;
+		justify-content: center;
+	}
+	.goals-tiles li {
+		max-width: calc((100% / 3) - 1rem);
+	}
+	.goals-tiles li a {
+	}
+}
+@media all and (min-width: 720px) {
+	.goals-tiles li a {
+		font-size: calc(var(--type__size) * 1.25);
+	}
+}
+
 
 .goals-tiles li a:hover {
 	box-shadow: 1px 1px 5px #bbb;
@@ -44,7 +76,7 @@
 }
 .goals-tiles.thumbs a {
 	font-size: .95rem;
-	max-width: 150px;
+	max-width: 140px;
 }
 
 .section-goal {

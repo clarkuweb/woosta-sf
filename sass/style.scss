@@ -25,10 +25,9 @@ Text Domain: woosta
 	
 	--color__2ndary_aqua: 95, 167, 177;	
 
-	--color__2ndary_yellow: 241, 211, 101;
-	
+	--color__2ndary_yellow: 241, 211, 101;	
 	--color__2ndary_yellow_contrast: 0, 0, 0;
-	--color__2ndary_blue: 67, 139, 219;
+
 	--color__2ndary_blue: 20, 37, 67;
 	--color__2ndary_blue_contrast: 255, 255, 255;
 
@@ -40,8 +39,20 @@ Text Domain: woosta
 	
 	--color__2ndary_lgray2: 215, 211, 203;
 	--color__2ndary_lgray2_contrast: 0, 0, 0;
+	
+	--type__serif: 'PT Serif', serif;
+		
 }
 
+body {
+	--wp--style--global--content-size: 53rem;
+}
+a:visited {
+	color: #cc0000;
+}
+.wp-block-button a:visited {
+	color: #fff;
+}
 
 
 .column-width {
@@ -68,11 +79,11 @@ Text Domain: woosta
 }
 
 h1, h2, h3, h4, h5, h6, .page-intro p, h1.entry-title {
-	font-family: 'PT Serif', serif;
+	font-family: var(--type__serif);
 	font-weight: 700;
 }
 .page-intro p {
-	font-family: 'PT Serif', serif;
+	font-family: var(--type__serif);
 	font-weight: 300;
 }
 body h1 {
@@ -182,7 +193,7 @@ header .entry-title {
 
 .wp-block-pullquote.big {
 	color: RGBA(var(--color__base800));
-	font-family: "PT Serif", serif;
+	font-family: var(--type__serif);
 }
 .wp-block-pullquote.big p {
 	max-width: 100%;
@@ -217,12 +228,13 @@ header .entry-title {
 	margin-bottom: 0;	
 }
 
+
 .focus-foci {
 	padding: calc(var(--type__size) * 2) 0;
 	margin-bottom: calc(var(--type__size) * 2);
 }
 .home-body .home-detail.wp-block-group {
-	background-color: RGBA(var(--color__2ndary_lgray),1);
+	background-color: #EDEAE4;
 	color: RGBA(var(--color__2ndary_lgray_contrast),1);
 	min-height: auto;
 }
@@ -238,14 +250,11 @@ header .entry-title {
 }
 
 
-.home-goals {
-/* 	background-color: RGBA(var(--color__2ndary_blue),1);
-	color: #fff; */
-}
+
 
 .home-focus,
 .focus-foci {
-	background-color: RGBA(var(--color__2ndary_lgray2),1);
+	background-color: #EDEAE4;
 	color: RGBA(var(--color__2ndary_lgray2_contrast),1);
 }
 .home-initiatives {
@@ -367,9 +376,11 @@ article.singular {
 		width: calc(50% - .75em);
 	}	
 }
-.wp-block-group .wp-block-group {
-	padding: 0 var(--type__size)  !important;
-}
+
+
+// .wp-block-group .wp-block-group {
+// 	padding: 0 var(--type__size)  !important;
+// }
 
 
 
@@ -379,6 +390,7 @@ article.singular {
 	background-color: #cc0000;
 	color: #fff;
 	margin-bottom: 0;
+	margin-top: calc(var(--type__size) * 4);
 	padding: calc(var(--type__size) * 3);
 	.wp-block-columns, p {
 		margin-bottom: 0 !important;
@@ -394,11 +406,13 @@ article.singular {
 .wp-block-group.cta .wp-block-button a,
 .wp-block-group.cta .wp-block-button a:hover {
 	background-color: transparent !important;
-	border-color: #fff;
+	border: 2px solid #fff;
 }
 .wp-block-group.cta .wp-block-button a:hover {
 	background-color: #aa0000 !important;
 }
+
+
 
 
 
