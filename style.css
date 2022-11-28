@@ -433,7 +433,6 @@ a:hover .disc {
 
 .home-intro {
 	background-size: cover;
-	background-color: #c08236;
 	color: #fff;
 	font-weight: 600;
 	/* 	margin-top: -7.5rem; */
@@ -816,6 +815,10 @@ header .entry-title {
 	color: RGB(var(--color__base_900));
 	font-weight: 400;
 	padding: 1rem 1.5rem;
+}
+
+.wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels {
+	text-align: center;
 }
 
 @keyframes appear {
