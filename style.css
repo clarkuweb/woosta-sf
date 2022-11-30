@@ -697,6 +697,7 @@ ul.aof-related .title {
 		text-decoration: none;
 	}
 	.main-nav li a:hover {
+		background-color: transparent;
 		text-decoration: underline;
 	}
 	.main-nav li.current_page_item > a {
