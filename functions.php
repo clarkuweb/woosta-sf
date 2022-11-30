@@ -67,20 +67,20 @@ function woosta_sf_dps_select_close( $output, $atts ) {
   if ( 'initiative' === $atts['layout'] ) {
 // 		wp_enqueue_script( 'woosta-sf-carousel', get_stylesheet_directory_uri() . '/js/carousel.js', array(), woosta_sf_cache_buster(), TRUE );
 		wp_enqueue_script( 'woosta-sf-splide', get_stylesheet_directory_uri() . '/js/splide/js/splide.min.js', array(), woosta_sf_cache_buster(), TRUE );
-		wp_enqueue_style( 'woosta-sf-splide', get_stylesheet_directory_uri() . '/js/splide/css/splide.min.css', array(), woosta_sf_cache_buster(), TRUE );
+		wp_enqueue_style( 'woosta-sf-splide', get_stylesheet_directory_uri() . '/js/splide/css/splide.min.css', array(), woosta_sf_cache_buster(), FALSE );
+
+		$output .= '</div></div>';
+
 		$output .= '
 		<script>
 			window.addEventListener("load", function(){
 				var splide = new Splide( ".splide", {
-					type   : "loop",
-					padding: "5rem",
 				} );
 
 				splide.mount();
 			})
 		</script>
 		';
-		$output .= '</div></div>';
 	}
 		
 	return $output;
