@@ -610,6 +610,10 @@ ul.aof-related .title {
 	top: 6rem;
 }
 
+body.admin-bar .main-nav.toggled::before {
+	top: 8.1rem;
+}
+
 .main-nav ul ul {
 	float: left;
 	position: absolute;
