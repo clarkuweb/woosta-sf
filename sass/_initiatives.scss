@@ -1,0 +1,49 @@
+.carousel {
+// 	overflow-x: hidden;
+// 	position: relative;
+	
+// 	button {
+// 		aspect-ratio: 1/1;
+// 		background-color: #cc0000;
+// 		border: 0;
+// 		color: #fff;
+// 		cursor: pointer;
+// 		display: inline-block;
+// 		font-size: calc(var(--type__size) * 1);
+// 		margin: 0 0 0 calc(var(--type__size) * .5);
+// 		padding: calc(var(--type__size) * .25) calc(var(--type__size) * .75);
+// 		
+// 		&[disabled] {
+// 			background-color: #aaa;
+// 		}
+// 		
+// 		&::after {
+// 		}
+// 		
+// 	}
+}
+
+.track {
+	--gap: 1rem;
+	--slide-amount: calc( ( (var(--slide-width) * -1px ) - (var(--gap) * 1.25) ) * var(--position) );
+	display: flex;
+	gap: var(--gap);
+	
+	//transform: translateX( var(--slide-amount) );
+
+
+	transition: .2s transform ease-out;
+	
+}
+
+.initiative {
+	margin-right: .5rem;
+	min-width: calc(100% / 1 - 1rem );
+}
+
+@media (min-width: 600px) {
+	.initiative {
+		margin-right: .5rem;
+		min-width: calc(100% / 2 - 1rem );
+	}
+}

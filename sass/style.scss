@@ -14,6 +14,7 @@ Text Domain: woosta
 
 @import 'aof';
 @import 'goals';
+@import 'initiatives';
 @import 'intro';
 @import 'nav';
 
@@ -62,6 +63,7 @@ optgroup,
 textarea {
 	font-weight: normal;
 }
+
 
 
 a:visited {
@@ -113,6 +115,9 @@ body h1 {
 	font-size: calc(var(--type__size) * 2.36);
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
 
 /* implementation */
 .page-id-330 .wp-block-cover {
@@ -232,19 +237,15 @@ header .entry-title {
 }
 
 .wp-block-pullquote.big blockquote {
-	margin: 0 calc(var(--type__size) * 3);
+	margin: 0 calc(var(--type__size) * 1.5);
 }
 
 .wp-block-pullquote.big cite {
 	margin-left: 0;
+	max-width: 70%;
 	text-align: left;
 // 	text-indent: -2ch;
 }
-
-
-// .wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels::after {
-// 	display: none;
-// }
 
 
 
@@ -370,10 +371,40 @@ header .entry-title {
 	display: block;
 }
 .teams-list img {
-	background-color: RGBA(var(--color__2ndary_green),1);
+	background-color: RGBA(var(--color__2ndary_gray),1);
 	float: left;
 	margin-right: 1rem;
+	padding: .5rem;
 	width: 90px !important;
+}
+
+.teams-list-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+.teams-list-grid li {
+	background-color: #fff;
+	background-color: rgba(var(--color__base_900),1);
+	border-top: 2px solid #cc0000;
+	padding: 2rem;
+	width: 100%;	
+}
+.teams-list-grid li img {
+	display: none;
+}
+.teams-list-grid li strong {
+	display: block;
+	margin-bottom: 1rem;
+}
+@media (min-width: 600px) {
+	.teams-list-grid li {
+		margin-right: .75rem;
+		width: calc(100% / 2 - 1.5rem);
+	}
 }
 
 

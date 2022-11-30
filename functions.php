@@ -39,6 +39,57 @@ add_action( 'wp_enqueue_scripts', 'woosta_sf_enqueue_styles' );
 
 
 
+
+/**
+ * Display Posts, initiatives open
+ *
+ * @param string $output Output.
+ * @param array  $atts Atttributes.
+ */
+function woosta_sf_dps_select_open( $output, $atts ) {
+	if ( 'initiative' === $atts['layout'] ) {
+		$output = '<' . $atts['wrapper'] . ' class="' . $atts['wrapper_class'] . ' carousel splide">
+		<div class="track splide__track">
+		<div class="splide__list">';
+	}
+	return $output;
+}
+add_filter( 'display_posts_shortcode_wrapper_open', 'woosta_sf_dps_select_open', 10, 2 );
+
+
+/**
+ * Display Posts, initiatives close
+ *
+ * @param string $output Output.
+ * @param array  $atts Atttributes.
+ */
+function woosta_sf_dps_select_close( $output, $atts ) {
+  if ( 'initiative' === $atts['layout'] ) {
+// 		wp_enqueue_script( 'woosta-sf-carousel', get_stylesheet_directory_uri() . '/js/carousel.js', array(), woosta_sf_cache_buster(), TRUE );
+		wp_enqueue_script( 'woosta-sf-splide', get_stylesheet_directory_uri() . '/js/splide/js/splide.min.js', array(), woosta_sf_cache_buster(), TRUE );
+		wp_enqueue_style( 'woosta-sf-splide', get_stylesheet_directory_uri() . '/js/splide/css/splide.min.css', array(), woosta_sf_cache_buster(), TRUE );
+		$output .= '
+		<script>
+			window.addEventListener("load", function(){
+				var splide = new Splide( ".splide", {
+					type   : "loop",
+					padding: "5rem",
+				} );
+
+				splide.mount();
+			})
+		</script>
+		';
+		$output .= '</div></div>';
+	}
+		
+	return $output;
+}
+add_filter( 'display_posts_shortcode_wrapper_close', 'woosta_sf_dps_select_close', 10, 2 );
+
+
+
+
 /**
  * Template Parts with Display Posts Shortcode
  * @author Bill Erickson
