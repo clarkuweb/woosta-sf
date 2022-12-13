@@ -110,22 +110,27 @@
 
 .goals-tiles li a[href*="goal1"],
 .section-goal-1 h2 {
-	background-color: RGBA(var(--color__2ndary_plum));
+	background-color: RGBA(var(--color__2ndary_g1));
+	color: RGBA(var(--color__2ndary_g1_contrast));
 }
 .goals-tiles li a[href*="goal2"],
 .section-goal-2 h2 {
-	background-color: RGBA(var(--color__2ndary_green));
+	background-color: RGBA(var(--color__2ndary_g2));
+	color: RGBA(var(--color__2ndary_g2_contrast));
 }
 .goals-tiles li a[href*="goal3"],
 .section-goal-3 h2 {
-	background-color: RGBA(var(--color__2ndary_blue));
+	background-color: RGBA(var(--color__2ndary_g3));
+	color: RGBA(var(--color__2ndary_g3_contrast));
 }
 .goals-tiles li a[href*="goal4"],
 .section-goal-4 h2 {
-	background-color: RGBA(var(--color__2ndary_dark_red));
+	background-color: RGBA(var(--color__2ndary_g4));
+	color: RGBA(var(--color__2ndary_g4_contrast));
 }
 .goals-tiles li a[href*="goal5"],
 .section-goal-5 h2 {
-	background-color: RGBA(var(--color__2ndary_gray));
+	background-color: RGBA(var(--color__2ndary_g5));
+	color: RGBA(var(--color__2ndary_g5_contrast));
 }
 

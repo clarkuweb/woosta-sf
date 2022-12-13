@@ -258,27 +258,32 @@ ul.aof-related .title {
 
 .goals-tiles li a[href*="goal1"],
 .section-goal-1 h2 {
-	background-color: RGBA(var(--color__2ndary_plum));
+	background-color: RGBA(var(--color__2ndary_g1));
+	color: RGBA(var(--color__2ndary_g1_contrast));
 }
 
 .goals-tiles li a[href*="goal2"],
 .section-goal-2 h2 {
-	background-color: RGBA(var(--color__2ndary_green));
+	background-color: RGBA(var(--color__2ndary_g2));
+	color: RGBA(var(--color__2ndary_g2_contrast));
 }
 
 .goals-tiles li a[href*="goal3"],
 .section-goal-3 h2 {
-	background-color: RGBA(var(--color__2ndary_blue));
+	background-color: RGBA(var(--color__2ndary_g3));
+	color: RGBA(var(--color__2ndary_g3_contrast));
 }
 
 .goals-tiles li a[href*="goal4"],
 .section-goal-4 h2 {
-	background-color: RGBA(var(--color__2ndary_dark_red));
+	background-color: RGBA(var(--color__2ndary_g4));
+	color: RGBA(var(--color__2ndary_g4_contrast));
 }
 
 .goals-tiles li a[href*="goal5"],
 .section-goal-5 h2 {
-	background-color: RGBA(var(--color__2ndary_gray));
+	background-color: RGBA(var(--color__2ndary_g5));
+	color: RGBA(var(--color__2ndary_g5_contrast));
 }
 
 .initiatives .splide__arrow {
@@ -482,8 +487,6 @@ ul.aof-related .title {
 .home-intro-1 .wp-block-group.title-slide,
 .home-intro p {
 	background-color: rgba(0, 0, 0, 0.3);
-	-webkit-backdrop-filter: blur(4px);
-	backdrop-filter: blur(4px);
 }
 
 .home-intro-1 {
@@ -712,25 +715,25 @@ body.admin-bar .main-nav.toggled::before {
 }
 
 :root {
-	--color__2ndary_plum: 39, 0, 29;
-	--color__2ndary_plum_contrast: 0, 0, 0;
-	--color__2ndary_dark_red: 142, 4, 9;
-	--color__2ndary_dark_red_contrast: 0, 0, 0;
-	--color__2ndary_orange: 234, 90, 53;
-	--color__2ndary_orange_contrast: 0, 0, 0;
-	--color__2ndary_green: 10, 77, 70;
-	--color__2ndary_green_contrast: 255, 255, 255;
-	--color__2ndary_aqua: 95, 167, 177;
-	--color__2ndary_yellow: 241, 211, 101;
-	--color__2ndary_yellow_contrast: 0, 0, 0;
-	--color__2ndary_blue: 20, 37, 67;
-	--color__2ndary_blue_contrast: 255, 255, 255;
+	/** orange **/
+	--color__2ndary_g1: 189, 74, 37;
+	--color__2ndary_g1_contrast: 255, 255, 255;
+	/** putty **/
+	--color__2ndary_g2: 193, 186, 176;
+	--color__2ndary_g2_contrast: 0, 0, 0;
+	/** burgundy **/
+	--color__2ndary_g3: 116, 36, 61;
+	--color__2ndary_g3_contrast: 255, 255, 255;
+	/** green **/
+	--color__2ndary_g4: 58, 80, 65;
+	--color__2ndary_g4_contrast: 255, 255, 255;
+	/** blue **/
+	--color__2ndary_g5: 62, 71, 86;
+	--color__2ndary_g5_contrast: 255, 255, 255;
 	--color__2ndary_gray: 88, 85, 90;
 	--color__2ndary_gray_contrast: 255, 255, 255;
 	--color__2ndary_lgray: 223, 219, 215;
 	--color__2ndary_lgray_contrast: 0, 0, 0;
-	--color__2ndary_lgray2: 215, 211, 203;
-	--color__2ndary_lgray2_contrast: 0, 0, 0;
 	--type__serif: 'Lora', serif;
 }
 
@@ -954,7 +957,7 @@ header .entry-title {
 .home-focus,
 .focus-foci {
 	background-color: #EDEAE4;
-	color: RGBA(var(--color__2ndary_lgray2_contrast), 1);
+	color: RGBA(var(--color__2ndary_lgray_contrast), 1);
 }
 
 .home-initiatives {
