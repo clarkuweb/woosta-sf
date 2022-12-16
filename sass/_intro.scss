@@ -132,7 +132,7 @@
 		font-size: calc(var(--type__size) * 2.1);
 	}
 	.home-intro h1.lg {
-  	font-size: calc(var(--type__size) * 6);
+  	font-size: calc(var(--type__size) * 5.55);
 	}
 }
 
@@ -159,22 +159,19 @@
 }
 
 
-
-
-
 .home-intro-1 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/view-from-tilton.jpg);
+	background-image: url(media/intro/view-from-tilton.jpg);
 	background-position: 50% 100%;
 }
 .home-intro-2 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/good-human.jpg);
+	background-image: url(media/intro/good-human.jpg);
 	background-position: 0 100%;
 }
 .home-intro-3 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(media/intro/classroom.jpg);
 	background-position: 50% 100%;
 }
 .home-intro-4 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
+	background-image: url(media/intro/students-walk.jpg);	
 	background-position: 50% 100%;
 }

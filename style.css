@@ -230,6 +230,7 @@ ul.aof-related .title {
 	align-items: center;
 	font-family: var(--type_sans);
 	font-size: calc(var(--type__size) * .8) !important;
+	font-weight: bold;
 	margin-top: calc(var(--type__size) * -5.5);
 	margin-left: calc(var(--type__size) * -1);
 	margin-bottom: calc(var(--type__size) * 1);
@@ -467,7 +468,7 @@ ul.aof-related .title {
 		font-size: calc(var(--type__size) * 2.1);
 	}
 	.home-intro h1.lg {
-		font-size: calc(var(--type__size) * 6);
+		font-size: calc(var(--type__size) * 5.55);
 	}
 }
 
@@ -490,22 +491,22 @@ ul.aof-related .title {
 }
 
 .home-intro-1 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/view-from-tilton.jpg);
+	background-image: url(media/intro/view-from-tilton.jpg);
 	background-position: 50% 100%;
 }
 
 .home-intro-2 {
-	background-image: url(http://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/10/good-human.jpg);
+	background-image: url(media/intro/good-human.jpg);
 	background-position: 0 100%;
 }
 
 .home-intro-3 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/classroom.jpg);
+	background-image: url(media/intro/classroom.jpg);
 	background-position: 50% 100%;
 }
 
 .home-intro-4 {
-	background-image: url(https://www.testing.clarku.edu/framework/wp-content/uploads/sites/300/sites/300/2022/11/goddard-library.jpg);
+	background-image: url(media/intro/students-walk.jpg);
 	background-position: 50% 100%;
 }
 
@@ -750,8 +751,18 @@ textarea {
 	font-weight: normal;
 }
 
+p > .aspires,
+p > .inspired {
+	color: #900;
+	font-weight: 500;
+}
+
 a:visited {
 	color: #cc0000;
+}
+
+a:hover {
+	color: #000;
 }
 
 .wp-block-button a:visited {
@@ -1209,6 +1220,51 @@ html body .footer-sf p {
 
 .footer-some .some a:hover {
 	background-color: #cc0000;
+}
+
+.teams-box {
+	background-color: rgba(var(--color__base_700), 1);
+	border: 1px solid rgba(var(--color__base_600), 1);
+	border-radius: 4px;
+	padding: 1rem;
+}
+
+.teams-list img {
+	background-color: RGBA(var(--color__2ndary_gray), 1);
+	padding: .5rem;
+}
+
+.teams-list-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.teams-list-grid li {
+	background-color: #fff;
+	background-color: rgba(var(--color__base_900), 1);
+	border-top: 2px solid #cc0000;
+	padding: 2rem;
+	width: 100%;
+}
+
+.teams-list-grid li img {
+	display: none;
+}
+
+.teams-list-grid li strong {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+	.teams-list-grid li {
+		margin-right: .75rem;
+		width: calc(100% / 2 - 1.5rem);
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
