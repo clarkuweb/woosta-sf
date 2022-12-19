@@ -11,14 +11,27 @@
 }
 
 
-.home .home-intro-wrapper {
-	scroll-snap-type: y proximity;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	position: relative;
-	top:0;
+// .home .home-intro-wrapper {
+// 	scroll-snap-type: y proximity;
+// 	overflow-x: hidden;
+// 	overflow-y: scroll;
+// 	position: relative;
+// 	top:0;
+// 	height: 100vh;
+// }
+
+
+.home-intro.sticky {
+	margin-bottom: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	height: 100vh;
+	position: sticky;
+	scroll-snap-align: start;
+	top: 0;
 }
+
 .home-intro {
 	background-size: cover;
 	color: #fff;
@@ -181,6 +194,6 @@
 	background-position: 50% 100%;
 }
 .home-intro-4 {
-	background-image: url(media/intro/students-walk.jpg?1);	
+	background-image: url(media/intro/walk.jpg?1);
 	background-position: 50% 100%;
 }

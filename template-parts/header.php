@@ -31,7 +31,9 @@
 		<div class="wp-block-columns are-vertically-aligned-center column-width is-not-stacked-on-mobile">
 		
 			<div class="wp-block-column is-vertically-aligned-center logo-col" style="flex-basis:220px">
-				<figure><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/media/clark-horizontal.png" alt="Clark University"></figure>
+				<a href="https://www.clarku.edu/">
+					<figure><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/media/clark-horizontal.png" alt="Clark University"></figure>
+				</a>
 			</div>
 
 			<div class="wp-block-column is-vertically-aligned-center menu-col">				
