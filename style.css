@@ -343,14 +343,20 @@ ul.aof-related .title {
 	}
 }
 
-.home-intro-wrapper {
+.home .home-intro-wrapper {
 	scroll-snap-type: y proximity;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	top: 0;
+	height: 100vh;
 }
 
 .home-intro {
 	background-size: cover;
 	color: #fff;
 	font-weight: 600;
+	scroll-snap-align: start;
 }
 
 .home-intro::after {
@@ -514,7 +520,7 @@ ul.aof-related .title {
 	background-color: #cc0000;
 	height: 5.25rem;
 	padding: .5rem;
-	position: relative;
+	position: absolute;
 	z-index: 99;
 }
 
@@ -873,10 +879,6 @@ header {
 
 header .entry-title {
 	margin-top: 2.25rem;
-}
-
-.home .entry-content {
-	margin-top: -7.5rem !important;
 }
 
 #jacket {

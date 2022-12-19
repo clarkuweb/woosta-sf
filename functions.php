@@ -20,7 +20,7 @@ function woosta_sf_cache_buster() {
 	static $cache_buster;
 	if ( empty( $cache_buster ) ) {
 		$cache_buster = _WOOSTA_SF_VERSION;
-		// $cache_buster = date(time());
+// 		$cache_buster = date(time());
 	}
 	return $cache_buster;
 }
