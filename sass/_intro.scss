@@ -11,27 +11,9 @@
 }
 
 
-// .home .home-intro-wrapper {
-// 	scroll-snap-type: y proximity;
-// 	overflow-x: hidden;
-// 	overflow-y: scroll;
-// 	position: relative;
-// 	top:0;
-// 	height: 100vh;
-// }
+
 html {
 	scroll-snap-type: y proximity;
-}
-
-.home-intro.sticky {
-// 	margin-bottom: 50vh;
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// 	height: 100vh;
-// 	position: sticky;
-// 	scroll-snap-align: start;
-// 	top: 0;
 }
 
 .home-intro-1,
@@ -40,6 +22,8 @@ html {
 .home-intro-4 {
 	scroll-snap-align: start;
 }
+
+
 .home-intro {
 	background-size: cover;
 	color: #fff;
