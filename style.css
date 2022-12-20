@@ -343,22 +343,21 @@ ul.aof-related .title {
 	}
 }
 
-.home-intro.sticky {
-	margin-bottom: 50vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	position: sticky;
+html {
+	scroll-snap-type: y proximity;
+}
+
+.home-intro-1,
+.home-intro-2,
+.home-intro-3,
+.home-intro-4 {
 	scroll-snap-align: start;
-	top: 0;
 }
 
 .home-intro {
 	background-size: cover;
 	color: #fff;
 	font-weight: 600;
-	scroll-snap-align: start;
 }
 
 .home-intro::after {

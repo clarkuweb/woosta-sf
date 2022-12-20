@@ -11,6 +11,16 @@ if ( ! defined( '_WOOSTA_SF_VERSION' ) ) {
 	define( '_WOOSTA_SF_VERSION', wp_get_theme()->get( 'Version' ) );
 }
 
+// show admin bar only for admins
+if (!current_user_can('manage_options')) {
+    add_filter('show_admin_bar', '__return_false');
+}
+// show admin bar only for admins and editors
+if (!current_user_can('edit_posts')) {
+    add_filter('show_admin_bar', '__return_false');
+}
+
+
 /**
  * Returns a string to be used for cache busting
  *
@@ -20,7 +30,7 @@ function woosta_sf_cache_buster() {
 	static $cache_buster;
 	if ( empty( $cache_buster ) ) {
 		$cache_buster = _WOOSTA_SF_VERSION;
-// 		$cache_buster = date(time());
+		$cache_buster = date(time());
 	}
 	return $cache_buster;
 }
