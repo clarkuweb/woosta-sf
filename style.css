@@ -553,11 +553,11 @@ html {
 	padding: 0;
 }
 
-.main-nav {
+.nav-trad .main-nav {
 	display: block;
 }
 
-.main-nav .menu-toggle {
+.nav-trad .main-nav .menu-toggle {
 	background-color: transparent;
 	border: none;
 	color: #fff;
@@ -566,9 +566,10 @@ html {
 	position: absolute;
 	top: 1.75rem;
 	right: 3rem;
+	padding: 0;
 }
 
-.main-nav .menu-toggle::before, .main-nav .menu-toggle::after {
+.nav-trad .main-nav .menu-toggle::before, .nav-trad .main-nav .menu-toggle::after {
 	border: 1px solid #fff;
 	content: '';
 	height: calc(var(--type__size) * 0);
@@ -579,15 +580,24 @@ html {
 	width: calc(var(--type__size) * .75);
 }
 
-.main-nav .menu-toggle::before {
+.nav-trad .main-nav .menu-toggle::before {
 	top: .6em;
 }
 
-.main-nav .menu-toggle::after {
+.nav-trad .main-nav .menu-toggle::after {
 	top: .9em;
 }
 
-.main-nav.toggled::before {
+.nav-trad .main-nav.toggled {
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-trad .main-nav.toggled::before {
 	background-color: rgba(var(--color__base_900), 1);
 	content: '';
 	display: block;
@@ -599,33 +609,39 @@ html {
 	width: 100vw;
 }
 
-.main-nav.toggled .menu-toggle::before, .main-nav.toggled .menu-toggle::after {
+.nav-trad .main-nav.toggled .menu-toggle::before, .nav-trad .main-nav.toggled .menu-toggle::after {
 	content: '';
 	position: absolute;
 	height: 0;
 	top: .75rem;
 }
 
-.main-nav.toggled .menu-toggle::before {
+.nav-trad .main-nav.toggled .menu-toggle::before {
 	transform: rotateZ(-135deg);
 }
 
-.main-nav.toggled .menu-toggle::after {
+.nav-trad .main-nav.toggled .menu-toggle::after {
 	transform: rotateZ(135deg);
 }
 
-.main-nav.toggled .menu-navigation-container {
+.nav-trad .main-nav.toggled .menu-navigation-container {
 	position: absolute;
 	left: 1rem;
 	right: 1rem;
 	top: 6rem;
 }
 
+nav.toggled > button {
+	height: auto;
+	width: auto;
+	left: auto;
+}
+
 body.admin-bar .main-nav.toggled::before {
 	top: 8.1rem;
 }
 
-.main-nav ul ul {
+.nav-trad .main-nav ul ul {
 	float: left;
 	position: absolute;
 	top: 100%;
@@ -633,31 +649,31 @@ body.admin-bar .main-nav.toggled::before {
 	z-index: 99999;
 }
 
-.main-nav ul ul ul {
+.nav-trad .main-nav ul ul ul {
 	left: -999em;
 	top: 0;
 }
 
-.main-nav ul ul li:hover > ul,
-.main-nav ul ul li.focus > ul {
+.nav-trad .main-nav ul ul li:hover > ul,
+.nav-trad .main-nav ul ul li.focus > ul {
 	display: block;
 	left: auto;
 }
 
-.main-nav ul ul a {
+.nav-trad .main-nav ul ul a {
 	width: 200px;
 }
 
-.main-nav ul li:hover > ul,
-.main-nav ul li.focus > ul {
+.nav-trad .main-nav ul li:hover > ul,
+.nav-trad .main-nav ul li.focus > ul {
 	left: auto;
 }
 
-.main-nav li {
+.nav-trad .main-nav li {
 	position: relative;
 }
 
-.main-nav a {
+.nav-trad .main-nav a {
 	display: block;
 	text-decoration: none;
 }
@@ -668,28 +684,47 @@ body.admin-bar .main-nav.toggled::before {
 	display: block;
 }
 
-.main-nav li {
+.main-nav.toggled ul {
+	position: relative !important;
+}
+
+.main-nav.toggled .menu-toggle, .main-nav.toggled .menu-toggle:hover {
+	background-color: transparent;
+}
+
+.nav-trad .main-nav li {
 	margin: 0;
 	padding: 0;
 }
 
-.main-nav a {
+.nav-trad .main-nav a {
 	color: #cc0000;
 	background-color: rgba(255, 255, 255, 0);
 	padding: .5rem;
 }
 
-.main-nav a:hover {
+.nav-trad .main-nav a:hover {
 	background-color: #fff;
 }
 
-.main-nav li.current_page_item > a {
+.nav-trad .main-nav li.current_page_item > a {
 	background-color: transparent;
 	color: #000;
 	pointer-events: none;
 }
 
+#site-navigation {
+	background-color: transparent;
+}
+
 @media screen and (min-width: 800px) {
+	#site-navigation {
+		background-color: transparent;
+	}
+	#site-navigation a:link, #site-navigation a:visited {
+		color: #fff;
+		padding: .5rem !important;
+	}
 	.menu-toggle {
 		display: none;
 	}
